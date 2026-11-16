@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Studio Workspace — PixelCraft Studio</title>
+  <meta name="description" content="Administrative control center for PixelCraft Studio: manage client projects, inquiries, revenue analytics, and studio content.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: #0b0b12;">
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar dashboard-navbar" style="border-bottom-color: var(--color-surface-border);">
+    <div class="container navbar-inner" style="max-width:100%; padding: 0 1.75rem;">
+      <div style="display:flex; align-items:center; gap:0.85rem;">
+        <button id="adminSidebarToggle" aria-label="Toggle Sidebar Menu" class="btn btn-outline btn-sm dashboard-sidebar-toggle" style="padding:0.45rem 0.85rem;">
+          ☰ <span class="dashboard-brand-tag">Admin</span> Menu
+        </button>
+        <a href="admin-dashboard.html" class="brand-logo" aria-label="PixelCraft Studio Admin Dashboard">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="135" height="53">
+          <span class="badge badge-orange dashboard-brand-tag" style="margin-left:0.5rem; font-size:0.75rem;">Admin HQ</span>
+        </a>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:1.25rem;">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <img src="assets/images/team-1.webp" alt="Elena Vance" width="38" height="38" style="width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid var(--color-purple);">
+          <div class="dashboard-user-info">
+            <div style="font-size:0.85rem; font-weight:700; color:#fff;">Elena Vance</div>
+            <div style="font-size:0.75rem; color:var(--color-orange);">Creative Director</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Admin Dashboard Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar Drawer -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation Sidebar">
+      <div>
+        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-dim); margin-bottom:1rem; padding-left:0.5rem;">
+          Studio Operations
+        </div>
+        <nav class="dashboard-nav">
+          <div class="dashboard-nav-item active" data-tab="admin-tab-overview">
+            <span>⚡</span> Dashboard Overview
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-projects">
+            <span>📁</span> Manage Projects
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-services">
+            <span>🛠️</span> Manage Services
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-categories">
+            <span>🏷️</span> Manage Categories
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-team">
+            <span>👥</span> Manage Team Members
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-inquiries">
+            <span>📬</span> Client Inquiries
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-testimonials">
+            <span>⭐</span> Manage Testimonials
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-blog">
+            <span>📰</span> Manage Blog Posts
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-reports">
+            <span>📈</span> Performance Reports
+          </div>
+          <div class="dashboard-nav-item" data-tab="admin-tab-settings">
+            <span>⚙️</span> Studio Settings
+          </div>
+        </nav>
+      </div>
+
+      <div style="border-top:1px solid var(--color-surface-border); padding-top:1.25rem; margin-top:2rem; display:flex; flex-direction:column; gap:0.65rem;">
+        <a href="index.html" class="btn btn-outline btn-sm btn-block">← Back to Main Website</a>
+        <a href="login.html" class="btn btn-outline btn-sm btn-block dashboard-logout-btn" style="color:var(--color-rose); border-color:rgba(244,63,94,0.35); display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Admin Content Container -->
+    <main class="dashboard-content">
+      
+      <!-- TAB 1: ADMIN OVERVIEW -->
+      <section class="dashboard-tab-panel active" id="admin-tab-overview">
+        <div class="dashboard-header-bar">
+          <div>
+            <h1 style="font-size:2rem; color:#fff; margin-bottom:0.35rem;">Studio Control Center</h1>
+            <p style="font-size:0.95rem; margin-bottom:0;">Live performance analytics, revenue tracking, and client deliverables.</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" data-modal-open="addProjectModal">+ Add New Project</button>
+        </div>
+
+        <!-- 4 Key Stat Cards -->
+        <div class="stats-cards-grid">
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.82rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Total Revenue (YTD)</span>
+              <span style="color:var(--color-emerald);">💰</span>
+            </div>
+            <div class="stat-metric-val">$184.5k</div>
+            <div class="stat-metric-change stat-up">↑ +24.2% vs Last Quarter</div>
+          </div>
+
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.82rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Active Enterprise Clients</span>
+              <span style="color:var(--color-purple);">🏢</span>
+            </div>
+            <div class="stat-metric-val">42</div>
+            <div class="stat-metric-change stat-up">↑ 6 Joined This Month</div>
+          </div>
+
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.82rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">In-Progress Projects</span>
+              <span style="color:var(--color-orange);">⚡</span>
+            </div>
+            <div class="stat-metric-val">18</div>
+            <div class="stat-metric-change stat-up">3 Nearing Completion</div>
+          </div>
+
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.82rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Proposal Conversion</span>
+              <span style="color:var(--color-cyan);">🎯</span>
+            </div>
+            <div class="stat-metric-val">24.8%</div>
+            <div class="stat-metric-change stat-up">↑ 4.1% Industry Benchmark</div>
+          </div>
+        </div>
+
+        <!-- HTML5 Canvas Responsive Charts -->
+        <div class="charts-grid">
+          <!-- Chart 1: Revenue Velocity -->
+          <div class="chart-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+              <div>
+                <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.25rem;">Monthly Revenue Trend ($ in Thousands)</h3>
+                <span style="font-size:0.8rem; color:var(--color-text-dim);">Real-time billing sprint tracking</span>
+              </div>
+              <span class="badge badge-purple">Live Demo</span>
+            </div>
+            <canvas id="revenueChartCanvas" class="chart-canvas"></canvas>
+          </div>
+
+          <!-- Chart 2: Category Breakdown -->
+          <div class="chart-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+              <div>
+                <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.25rem;">Deliverables by Discipline</h3>
+                <span style="font-size:0.8rem; color:var(--color-text-dim);">Project volume distribution</span>
+              </div>
+              <span class="badge badge-orange">Q4 Sprints</span>
+            </div>
+            <canvas id="categoryChartCanvas" class="chart-canvas"></canvas>
+          </div>
+        </div>
+
+        <!-- Quick Inquiries Preview on Overview -->
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+            <h3 style="font-size:1.25rem; color:#fff;">Incoming Client Discovery Inquiries</h3>
+            <span style="font-size:0.85rem; color:var(--color-orange);">Change status dropdown to test persistence</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Prospective Client</th>
+                  <th>Service Requested</th>
+                  <th>Budget</th>
+                  <th>Current Status</th>
+                  <th>Received Date</th>
+                </tr>
+              </thead>
+              <tbody id="adminInquiriesTableBody">
+                <!-- Inquiries populated dynamically from script.js / localStorage -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: MANAGE PROJECTS (CRUD) -->
+      <section class="dashboard-tab-panel" id="admin-tab-projects">
+        <div class="dashboard-header-bar">
+          <div>
+            <h1 style="font-size:2rem; color:#fff; margin-bottom:0.35rem;">Manage Portfolio & Client Projects</h1>
+            <p style="font-size:0.95rem; margin-bottom:0;">Full CRUD capabilities (Create, Read, Edit, Delete with confirmation dialog).</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" data-modal-open="addProjectModal">+ Add Project</button>
+        </div>
+
+        <!-- Search and Filter Bar -->
+        <div class="filter-bar" style="margin-bottom:1.5rem; padding:0.85rem 1.25rem;">
+          <div style="display:flex; align-items:center; gap:1rem; flex-grow:1;">
+            <input type="text" id="adminProjectSearch" class="search-input" placeholder="Search by project name or client..." style="max-width:320px;">
+            <select id="adminProjectCatFilter" class="form-control" style="width:auto; padding:0.5rem 1rem;">
+              <option value="all">All Categories</option>
+              <option value="Branding">Branding</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Website Design">Website Design</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Packaging">Packaging</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card" style="padding:0; overflow:hidden;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Project Code</th>
+                  <th>Project Title</th>
+                  <th>Discipline</th>
+                  <th>Client Organization</th>
+                  <th>Workflow Status</th>
+                  <th style="text-align:right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProjectsTableBody">
+                <!-- Dynamically rendered by script.js with localStorage sync -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: MANAGE SERVICES -->
+      <section class="dashboard-tab-panel" id="admin-tab-services">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Manage Capabilities & Services</h1>
+          <button class="btn btn-primary btn-sm" onclick="showToast('New service capability template ready.', 'info')">+ Add Capability</button>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card" style="padding:1.5rem;">
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Brand Identity Design</h4>
+            <span class="badge badge-purple" style="margin-bottom:0.75rem;">Active • 12 Active Sprints</span>
+            <p style="font-size:0.88rem;">Guidelines, typography scales, tone of voice, corporate stationery.</p>
+            <div style="display:flex; gap:0.5rem;">
+              <a href="service-details.html?service=brand-identity" class="btn btn-outline btn-sm">Preview</a>
+              <button class="btn btn-outline btn-sm" onclick="showToast('Service configuration edited.', 'success')">Edit</button>
+            </div>
+          </div>
+
+          <div class="card" style="padding:1.5rem;">
+            <h4 style="color:#fff; margin-bottom:0.4rem;">UI/UX Design</h4>
+            <span class="badge badge-purple" style="margin-bottom:0.75rem;">Active • 18 Active Sprints</span>
+            <p style="font-size:0.88rem;">Design systems, user ergonomics, Figma interactive prototypes.</p>
+            <div style="display:flex; gap:0.5rem;">
+              <a href="service-details.html?service=ui-ux" class="btn btn-outline btn-sm">Preview</a>
+              <button class="btn btn-outline btn-sm" onclick="showToast('Service configuration edited.', 'success')">Edit</button>
+            </div>
+          </div>
+
+          <div class="card" style="padding:1.5rem;">
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Website Development</h4>
+            <span class="badge badge-purple" style="margin-bottom:0.75rem;">Active • 15 Active Sprints</span>
+            <p style="font-size:0.88rem;">Semantic HTML5, CSS3, modern JavaScript, 100% Lighthouse score.</p>
+            <div style="display:flex; gap:0.5rem;">
+              <a href="service-details.html?service=web-development" class="btn btn-outline btn-sm">Preview</a>
+              <button class="btn btn-outline btn-sm" onclick="showToast('Service configuration edited.', 'success')">Edit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: MANAGE CATEGORIES -->
+      <section class="dashboard-tab-panel" id="admin-tab-categories">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Manage Project Categories</h1>
+        </div>
+        <div class="card" style="max-width:700px;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Category Name</th>
+                <th>Total Projects</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Branding</td><td>28</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>Website Design</td><td>34</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>UI/UX Design</td><td>26</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>Graphic Design</td><td>19</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>Packaging Design</td><td>16</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>Digital Marketing</td><td>21</td><td><span class="status-pill status-completed">Published</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TAB 5: MANAGE TEAM MEMBERS -->
+      <section class="dashboard-tab-panel" id="admin-tab-team">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Manage Studio Team Members</h1>
+          <button class="btn btn-primary btn-sm" onclick="showToast('Team invitation modal triggered.', 'info')">+ Add Specialist</button>
+        </div>
+        <div class="grid grid-3">
+          <div class="card" style="padding:1.5rem; text-align:center;">
+            <img src="assets/images/team-1.webp" alt="Elena Vance" width="80" height="80" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin:0 auto 1rem; border:2px solid var(--color-purple);">
+            <h4 style="color:#fff; margin-bottom:0.25rem;">Elena Vance</h4>
+            <div style="font-size:0.82rem; color:var(--color-orange); margin-bottom:1rem;">Creative Director & Founder</div>
+            <a href="team-details.html?member=elena-vance" class="btn btn-outline btn-sm btn-block">Inspect Profile</a>
+          </div>
+
+          <div class="card" style="padding:1.5rem; text-align:center;">
+            <img src="assets/images/team-2.webp" alt="Marcus Thorne" width="80" height="80" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin:0 auto 1rem; border:2px solid var(--color-purple);">
+            <h4 style="color:#fff; margin-bottom:0.25rem;">Marcus Thorne</h4>
+            <div style="font-size:0.82rem; color:var(--color-orange); margin-bottom:1rem;">Lead UI/UX Designer</div>
+            <a href="team-details.html?member=marcus-thorne" class="btn btn-outline btn-sm btn-block">Inspect Profile</a>
+          </div>
+
+          <div class="card" style="padding:1.5rem; text-align:center;">
+            <img src="assets/images/team-3.webp" alt="Alex Rivera" width="80" height="80" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin:0 auto 1rem; border:2px solid var(--color-purple);">
+            <h4 style="color:#fff; margin-bottom:0.25rem;">Alex Rivera</h4>
+            <div style="font-size:0.82rem; color:var(--color-orange); margin-bottom:1rem;">Lead Web Developer</div>
+            <a href="team-details.html?member=alex-rivera" class="btn btn-outline btn-sm btn-block">Inspect Profile</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 6: INQUIRIES -->
+      <section class="dashboard-tab-panel" id="admin-tab-inquiries">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Client Discovery Inquiries</h1>
+        </div>
+        <div class="card">
+          <p style="font-size:0.9rem; margin-bottom:1.5rem;">
+            Whenever a visitor submits the "Start a Project" inquiry form, it automatically populates here. You can update review status dynamically.
+          </p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Client</th>
+                  <th>Service</th>
+                  <th>Budget</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="adminInquiriesTableBody2">
+                <!-- Syncs with main table -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 7: TESTIMONIALS -->
+      <section class="dashboard-tab-panel" id="admin-tab-testimonials">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Manage Client Testimonials</h1>
+        </div>
+        <div class="card" style="max-width:800px;">
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div style="padding:1rem; background:#12121c; border-radius:var(--radius-md); border:1px solid var(--color-surface-border);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                <strong style="color:#fff;">Julian Devereux (Aura Sound Labs)</strong>
+                <span style="color:var(--color-amber);">★★★★★</span>
+              </div>
+              <p style="font-size:0.9rem; margin-bottom:0;">"PixelCraft transformed Aura from a fledgling hardware prototype into an internationally coveted consumer luxury brand."</p>
+            </div>
+            <div style="padding:1rem; background:#12121c; border-radius:var(--radius-md); border:1px solid var(--color-surface-border);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                <strong style="color:#fff;">Sasha Lindqvist (Luminary Fintech)</strong>
+                <span style="color:var(--color-amber);">★★★★★</span>
+              </div>
+              <p style="font-size:0.9rem; margin-bottom:0;">"Their mastery of spatial UI and dark-mode ergonomics gave our fintech application an instant competitive edge."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 8: BLOG POSTS -->
+      <section class="dashboard-tab-panel" id="admin-tab-blog">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Manage Editorial Articles</h1>
+          <button class="btn btn-secondary btn-sm" onclick="showToast('New markdown editor draft initiated.', 'info')">+ New Article Draft</button>
+        </div>
+        <div class="card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Article Title</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Views</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>The Evolution of Spatial UI: Beyond Flat Interfaces</td><td>Design Trends</td><td>Marcus Thorne</td><td>4,210</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>Branding in the Age of Generative Intelligence</td><td>Branding</td><td>Elena Vance</td><td>3,890</td><td><span class="status-pill status-completed">Published</span></td></tr>
+              <tr><td>Mastering Micro-Interactions: The Secret to Addictive UX</td><td>UI/UX</td><td>Marcus Thorne</td><td>2,950</td><td><span class="status-pill status-completed">Published</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TAB 9: REPORTS -->
+      <section class="dashboard-tab-panel" id="admin-tab-reports">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Executive Performance Reports</h1>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 style="color:#fff; font-size:1.25rem; margin-bottom:1rem;">Deliverable Velocity</h3>
+            <p style="font-size:0.92rem;">Average sprint turnaround time: <strong>4.2 weeks</strong> across all brand and engineering deliverables.</p>
+            <div style="margin-top:1.5rem; display:flex; gap:1rem;">
+              <button class="btn btn-outline btn-sm" onclick="showToast('Exporting PDF audit report...', 'info')">Export PDF Audit</button>
+              <button class="btn btn-outline btn-sm" onclick="showToast('Exporting CSV revenue data...', 'info')">Export CSV</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="color:#fff; font-size:1.25rem; margin-bottom:1rem;">Client Satisfaction</h3>
+            <p style="font-size:0.92rem;">Net Promoter Score (NPS): <strong style="color:var(--color-emerald);">+88</strong> (World-class rating among creative digital agencies).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 10: SETTINGS -->
+      <section class="dashboard-tab-panel" id="admin-tab-settings">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Studio Global Configuration</h1>
+        </div>
+        <div class="card" style="max-width:700px; padding:2rem;">
+          <form onsubmit="event.preventDefault(); showToast('Studio configurations saved.', 'success');">
+            <div class="form-group">
+              <label class="form-label" for="studioAgencyName">Agency Name</label>
+              <input type="text" id="studioAgencyName" class="form-control" value="PixelCraft Studio">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="studioEmail">Primary Notification Email</label>
+              <input type="email" id="studioEmail" class="form-control" value="directors@pixelcraft.studio">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="studioCurrency">Default Invoicing Currency</label>
+              <select id="studioCurrency" class="form-control">
+                <option value="USD" selected>USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Studio Settings</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ADD PROJECT MODAL -->
+  <div class="modal-backdrop" id="addProjectModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Add New Studio Project</h3>
+        <button class="modal-close-btn" data-modal-close>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="adminAddProjectForm">
+          <div class="form-group">
+            <label class="form-label" for="addProjTitle">Project Title <span class="required">*</span></label>
+            <input type="text" id="addProjTitle" class="form-control" placeholder="e.g. Kinetix VR Interface" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="addProjClient">Client Organization <span class="required">*</span></label>
+            <input type="text" id="addProjClient" class="form-control" placeholder="e.g. Kinetix Robotics" required>
+          </div>
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label class="form-label" for="addProjCategory">Category</label>
+              <select id="addProjCategory" class="form-control">
+                <option value="Branding">Branding</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Website Design">Website Design</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Packaging">Packaging</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="addProjStatus">Status</label>
+              <select id="addProjStatus" class="form-control">
+                <option value="In Progress">In Progress</option>
+                <option value="Review">Review</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="addProjBudget">Contract Budget</label>
+            <input type="text" id="addProjBudget" class="form-control" placeholder="$25,000">
+          </div>
+          <button type="submit" class="btn btn-secondary btn-block">Create Project Record</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT PROJECT MODAL -->
+  <div class="modal-backdrop" id="editProjectModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Edit Project Record</h3>
+        <button class="modal-close-btn" data-modal-close>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="adminEditProjectForm">
+          <input type="hidden" id="editProjId">
+          <div class="form-group">
+            <label class="form-label" for="editProjTitle">Project Title</label>
+            <input type="text" id="editProjTitle" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="editProjClient">Client Organization</label>
+            <input type="text" id="editProjClient" class="form-control" required>
+          </div>
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label class="form-label" for="editProjCategory">Category</label>
+              <select id="editProjCategory" class="form-control">
+                <option value="Branding">Branding</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Website Design">Website Design</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Packaging">Packaging</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editProjStatus">Status</label>
+              <select id="editProjStatus" class="form-control">
+                <option value="In Progress">In Progress</option>
+                <option value="Review">Review</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

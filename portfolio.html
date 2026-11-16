@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Gallery — PixelCraft Studio | Creative Agency</title>
+  <meta name="description" content="Explore selected case studies and creative projects by PixelCraft Studio across Branding, UI/UX, Web Design, Packaging, Photography, and Marketing.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span>DEMO PREVIEW:</span> PixelCraft Studio portfolio showcase. All client references, metrics, and inquiry forms are simulated.
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="PixelCraft Studio Homepage">
+        <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="144" height="57">
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="start-project.html" class="btn btn-primary btn-sm">Start a Project</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="130" height="51">
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu" style="background:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>→</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+        <a href="services.html" class="mobile-nav-link">Our Services <span>→</span></a>
+        <a href="portfolio.html" class="mobile-nav-link active">Portfolio <span>→</span></a>
+        <a href="team.html" class="mobile-nav-link">Our Team <span>→</span></a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing Plans <span>→</span></a>
+        <a href="blog.html" class="mobile-nav-link">Studio Blog <span>→</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us <span>→</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="start-project.html" class="btn btn-secondary btn-block">Start a Project</a>
+      <div class="mobile-drawer-contact">
+        <div class="drawer-contact-title">Direct Studio Contact</div>
+        <a href="mailto:hello@pixelcraft.studio" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#9993;</span>
+          <span class="drawer-contact-text">hello@pixelcraft.studio</span>
+        </a>
+        <a href="tel:+15557493527" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128222;</span>
+          <span class="drawer-contact-text">+1 (555) 749-3527</span>
+        </a>
+        <div class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128205;</span>
+          <span class="drawer-contact-text">New York &bull; London &bull; Tokyo</span>
+        </div>
+        <div class="drawer-contact-hours">&#9201; Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM EST</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Header -->
+    <section class="section-py" style="padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: 2.5rem;">
+      <div class="container text-center">
+        <div class="section-eyebrow">Our Portfolio</div>
+        <h1 class="section-title">Case Studies & <span class="text-gradient">Featured Work</span></h1>
+        <p class="section-desc" style="margin: 0 auto 2.5rem auto;">
+          Immerse yourself in our recent brand transformations, digital products, and physical packaging systems. Every project reflects ruthless attention to detail.
+        </p>
+        <div style="max-width:1000px; margin:0 auto; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--color-surface-border); box-shadow:var(--shadow-lg), var(--shadow-glow-purple);">
+          <img src="assets/images/portfolio-hero.webp" alt="Vibrant branding, logo design, color palettes, and product mockup showcase gallery" width="947" height="632" loading="eager" fetchpriority="high" style="width:100%; max-height:540px; object-fit:cover; display:block;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Bar & Projects Grid -->
+    <section class="section-py" style="padding-top:0;">
+      <div class="container">
+        <!-- Interactive Category Pills & Search -->
+        <div class="filter-bar" id="portfolioFilterBar">
+          <div class="filter-pills">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="website design">Website Design</button>
+            <button class="filter-btn" data-filter="ui/ux design">UI/UX Design</button>
+            <button class="filter-btn" data-filter="graphic design">Graphic Design</button>
+            <button class="filter-btn" data-filter="digital marketing">Digital Marketing</button>
+            <button class="filter-btn" data-filter="photography">Photography</button>
+            <button class="filter-btn" data-filter="packaging design">Packaging Design</button>
+          </div>
+
+          <div class="search-box">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" class="search-input" id="portfolioSearchInput" placeholder="Search case studies..." aria-label="Search portfolio">
+          </div>
+        </div>
+
+        <div id="portfolioResultCount" style="margin-bottom:1.75rem; font-size:0.9rem; color:var(--color-text-dim);">
+          Showing 10 projects
+        </div>
+
+        <!-- 10 Detailed Project Cards -->
+        <div class="grid grid-2" id="portfolioGrid">
+          
+          <!-- Project 1 -->
+          <div class="project-card project-card-item" data-category="branding">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-1.webp" alt="Aura Spatial Audio" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-1" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Branding</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Aura Sound Labs</span>
+              </div>
+              <h3 class="project-title">Aura Spatial Audio</h3>
+              <p class="project-desc">Complete acoustic brand identity, tactile unboxing packaging, and responsive e-commerce platform for high-end spatial audio headphones.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">+184% Pre-orders</span>
+                <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card project-card-item" data-category="ui/ux design">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-2.webp" alt="Luminary Financial App" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-2" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">UI/UX Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Luminary Fintech</span>
+              </div>
+              <h3 class="project-title">Luminary Financial App</h3>
+              <p class="project-desc">A dark-mode fintech mobile system simplifying algorithmic asset trading, multi-currency yields, and real-time portfolio visualization.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">4.9/5 Rating</span>
+                <a href="project-details.html?project=portfolio-2" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card project-card-item" data-category="website design">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-3.webp" alt="Vortex Autonomous Mobility" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-3" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Website Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Vortex Motors</span>
+              </div>
+              <h3 class="project-title">Vortex Autonomous Mobility</h3>
+              <p class="project-desc">Interactive 3D vehicle configurator and editorial brand experience for a flagship autonomous electric sports sedan.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">2.1M Views</span>
+                <a href="project-details.html?project=portfolio-3" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card project-card-item" data-category="graphic design">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-4.webp" alt="NeoKyoto Streetwear" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-4" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Graphic Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">NeoKyoto Apparel</span>
+              </div>
+              <h3 class="project-title">NeoKyoto Streetwear</h3>
+              <p class="project-desc">Cyberpunk apparel visual system blending vintage manga screen tones, holographic tags, and limited-edition typographic silkscreen prints.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">Sold Out in 48m</span>
+                <a href="project-details.html?project=portfolio-4" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card project-card-item" data-category="packaging design">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-5.webp" alt="Solstice Botanical Elixir" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-5" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Packaging Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Solstice Organics</span>
+              </div>
+              <h3 class="project-title">Solstice Botanical Elixir</h3>
+              <p class="project-desc">Eco-luxury matte aluminum canister packaging and debossed botanical iconography distributed in over 1,400 retail doors globally.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">1,400+ Retail Doors</span>
+                <a href="project-details.html?project=portfolio-5" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card project-card-item" data-category="digital marketing">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-6.webp" alt="Pulse Worldwide Festival" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-6" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Digital Marketing</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Pulse Live Global</span>
+              </div>
+              <h3 class="project-title">Pulse Worldwide Festival</h3>
+              <p class="project-desc">Global digital advertising campaign, kinetic audio-reactive stage graphics, and interactive lineup explorer for 85,000 festival attendees.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">4.2x Blended ROAS</span>
+                <a href="project-details.html?project=portfolio-6" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="project-card project-card-item" data-category="photography">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-7.webp" alt="Chronos Haute Horlogerie" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-1" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Photography</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Chronos Genève</span>
+              </div>
+              <h3 class="project-title">Chronos Haute Horlogerie</h3>
+              <p class="project-desc">Dramatic studio macro photography capturing tourbillon escapements, hand-finished anglage bevels, and sapphire crystal reflections.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">Photo Annual Winner</span>
+                <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="project-card project-card-item" data-category="website design">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-8.webp" alt="Hyperion AI Workspace" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-2" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Website Development</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Hyperion Systems</span>
+              </div>
+              <h3 class="project-title">Hyperion AI Workspace</h3>
+              <p class="project-desc">Full-stack web application with responsive 3D node graphs, instant latency telemetry, and developer documentation portal.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">99.9% Uptime</span>
+                <a href="project-details.html?project=portfolio-2" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="project-card project-card-item" data-category="branding">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-9.webp" alt="Komorebi Architecture" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-1" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Branding</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Komorebi Studio</span>
+              </div>
+              <h3 class="project-title">Komorebi Architecture</h3>
+              <p class="project-desc">A serene monograph and spatial identity for a sustainable architectural atelier, printed with blind deboss on stone paper.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">Tokyo Design Award</span>
+                <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 10 -->
+          <div class="project-card project-card-item" data-category="ui/ux design">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-10.webp" alt="Zenith Avionics HUD" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-2" class="btn btn-primary btn-sm">View Project Details</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">UI/UX Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Zenith Aero</span>
+              </div>
+              <h3 class="project-title">Zenith Avionics HUD</h3>
+              <p class="project-desc">Next-generation heads-up telemetry display interface engineered for high-altitude electric aircraft pilots with critical glanceability.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.88rem;">Zero Latency UX</span>
+                <a href="project-details.html?project=portfolio-2" class="btn btn-outline btn-sm">View Project →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Impact Summary -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Commercial Impact (Demo Data)</div>
+          <h2 class="section-title">Results Across <span class="text-gradient">Every Discipline</span></h2>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card text-center">
+            <div style="font-size:2.25rem; font-weight:800; color:var(--color-orange); margin-bottom:0.35rem;">+184%</div>
+            <div style="font-weight:700; color:#fff; margin-bottom:0.25rem;">Pre-Order Velocity</div>
+            <div style="font-size:0.82rem; color:var(--color-text-dim);">Aura Spatial Audio (Demo)</div>
+          </div>
+          <div class="card text-center">
+            <div style="font-size:2.25rem; font-weight:800; color:var(--color-lavender); margin-bottom:0.35rem;">4.9/5</div>
+            <div style="font-weight:700; color:#fff; margin-bottom:0.25rem;">App Store Rating</div>
+            <div style="font-size:0.82rem; color:var(--color-text-dim);">Luminary Fintech (Demo)</div>
+          </div>
+          <div class="card text-center">
+            <div style="font-size:2.25rem; font-weight:800; color:var(--color-emerald); margin-bottom:0.35rem;">+215%</div>
+            <div style="font-weight:700; color:#fff; margin-bottom:0.25rem;">Retail Sell-Through</div>
+            <div style="font-size:0.82rem; color:var(--color-text-dim);">Solstice Botanicals (Demo)</div>
+          </div>
+          <div class="card text-center">
+            <div style="font-size:2.25rem; font-weight:800; color:var(--color-cyan); margin-bottom:0.35rem;">2.1M</div>
+            <div style="font-weight:700; color:#fff; margin-bottom:0.25rem;">Launch Page Views</div>
+            <div style="font-size:0.82rem; color:var(--color-text-dim);">Vortex Mobility (Demo)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honors & Industry Recognition -->
+    <section class="section-py">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Recognition</div>
+          <h2 class="section-title">Awards & <span class="text-gradient">Distinctions</span></h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Awwwards 2026</span>
+            <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Site of the Day & Studio Honors</h3>
+            <p style="font-size:0.88rem; margin:0;">Recognized for Vortex Autonomous Mobility and kinetic WebGL craftsmanship.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.75rem;">Red Dot & Dieline</span>
+            <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Packaging & Brand Excellence</h3>
+            <p style="font-size:0.88rem; margin:0;">Awarded for sustainable tactile unboxing systems and botanical packaging design.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">D&AD Pencils</span>
+            <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Typography & Digital Craft</h3>
+            <p style="font-size:0.88rem; margin:0;">Honored for custom variable display typography and spatial UI component libraries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container text-center">
+        <h2>Want Your Brand In Our Showcase?</h2>
+        <p class="section-desc" style="margin: 1rem auto 2.5rem auto;">Tell us about your upcoming project and let's create something extraordinary together.</p>
+        <a href="start-project.html" class="btn btn-secondary btn-lg">Submit a Project Brief</a>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Homepage">
+            <img src="assets/images/logo-teal.webp" alt="Stackly Logo" class="logo-img" width="144" height="57">
+          </a>
+          <p class="footer-desc">
+            Mobilizing intelligent financial tracking, automated category allocations, food security envelopes, and personalized wealth planning for modern life.
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="services.html">Platform Features</a>
+            <a href="portfolio.html">Expense Categories</a>
+            <a href="team.html">Expense Management</a>
+            <a href="pricing.html">Budget Planner</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h5>Support</h5>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="about.html">Terms & Agreements</a>
+            <a href="pricing.html">Security Audits</a>
+            <a href="services.html">Cashflow Reports</a>
+            <a href="portfolio.html">Savings Vaults</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p class="newsletter-desc">Get quarterly financial updates, smart budgeting alerts, and platform feature reports.</p>
+          <form class="footer-newsletter-form" aria-label="Newsletter Subscription Form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required aria-label="Your Email">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

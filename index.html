@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelCraft Studio — Bold Creative Agency & Digital Production</title>
+  <meta name="description" content="PixelCraft Studio is a world-class creative agency delivering branding, UI/UX design, bespoke web development, 3D graphics, and digital marketing.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>DEMO PREVIEW:</span> PixelCraft Studio portfolio showcase. All client references, metrics, and inquiry forms are simulated.
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="PixelCraft Studio Homepage">
+        <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="144" height="57">
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="start-project.html" class="btn btn-primary btn-sm">Start a Project</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="130" height="51">
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu" style="background:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active">Home <span>→</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+        <a href="services.html" class="mobile-nav-link">Our Services <span>→</span></a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio <span>→</span></a>
+        <a href="team.html" class="mobile-nav-link">Our Team <span>→</span></a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing Plans <span>→</span></a>
+        <a href="blog.html" class="mobile-nav-link">Studio Blog <span>→</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us <span>→</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="start-project.html" class="btn btn-secondary btn-block">Start a Project</a>
+      <div class="mobile-drawer-contact">
+        <div class="drawer-contact-title">Direct Studio Contact</div>
+        <a href="mailto:hello@pixelcraft.studio" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#9993;</span>
+          <span class="drawer-contact-text">hello@pixelcraft.studio</span>
+        </a>
+        <a href="tel:+15557493527" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128222;</span>
+          <span class="drawer-contact-text">+1 (555) 749-3527</span>
+        </a>
+        <div class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128205;</span>
+          <span class="drawer-contact-text">New York &bull; London &bull; Tokyo</span>
+        </div>
+        <div class="drawer-contact-hours">&#9201; Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM EST</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+      <div class="ambient-glow glow-purple" style="top:-100px; left:-100px;"></div>
+      <div class="ambient-glow glow-orange" style="bottom:-100px; right:-50px;"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="section-eyebrow">Digital Creative Studio '26</div>
+            <h1 class="hero-heading">We Turn Creative Ideas Into <span class="text-gradient">Digital Experiences.</span></h1>
+            <p class="hero-desc">
+              We are an avant-garde digital agency engineered for visionary brands. We fuse audacious visual identities, spatial UI/UX architectures, and bespoke web engineering to produce unmatched digital prestige.
+            </p>
+            <div class="hero-btns">
+              <a href="portfolio.html" class="btn btn-primary btn-lg">
+                Explore Our Work
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="start-project.html" class="btn btn-outline btn-lg">Start a Project</a>
+            </div>
+
+            <div class="hero-stats-strip">
+              <div class="hero-stat-item">
+                <h4 data-counter data-target="250" data-suffix="+">250+</h4>
+                <p>Projects Delivered</p>
+              </div>
+              <div class="hero-stat-item">
+                <h4 data-counter data-target="34" data-suffix=" Global">34 Global</h4>
+                <p>Creative Awards</p>
+              </div>
+              <div class="hero-stat-item">
+                <h4 data-counter data-target="99" data-suffix="%">99%</h4>
+                <p>Client Satisfaction</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-wrapper">
+              <!-- Loaded eagerly as requested for hero -->
+              <img src="assets/images/hero-main.webp" alt="3D iridescent glass and vibrant orange abstract creative sculpture" width="994" height="341" loading="eager" fetchpriority="high">
+            </div>
+
+            <div class="hero-float-chip hero-chip-1">
+              <div class="chip-icon chip-icon-purple">★</div>
+              <div>
+                <div style="font-weight:700; color:#ffffff; font-size:0.9rem;">Studio of the Year</div>
+                <div style="font-size:0.75rem; color:var(--color-lavender);">Awwwards & D&AD 2026</div>
+              </div>
+            </div>
+
+            <div class="hero-float-chip hero-chip-2">
+              <div class="chip-icon chip-icon-orange">⚡</div>
+              <div>
+                <div style="font-weight:700; color:#ffffff; font-size:0.9rem;">3.8x Average ROI</div>
+                <div style="font-size:0.75rem; color:var(--color-orange);">Measurable Impact</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Project Showcase Strip -->
+        <div class="hero-showcase-strip" style="margin-top: clamp(2rem, 3.5vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--color-surface-border);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; flex-wrap:wrap; gap:0.75rem;">
+            <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-lavender); display:flex; align-items:center; gap:0.5rem;">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--color-orange); box-shadow:0 0 10px var(--color-orange);"></span>
+              Live Studio Artifacts // Fresh from the lab
+            </div>
+            <a href="portfolio.html" style="font-size:0.85rem; color:var(--color-orange); font-weight:700; display:inline-flex; align-items:center; gap:0.4rem;">
+              View All 50+ Projects <span>→</span>
+            </a>
+          </div>
+          <div class="grid grid-3" style="gap:1.25rem;">
+            <a href="project-details.html?project=portfolio-1" class="hero-mini-card" style="display:flex; align-items:center; gap:1rem; padding:0.85rem 1rem; background:rgba(22,22,34,0.6); border:1px solid var(--color-surface-border); border-radius:var(--radius-md); text-decoration:none;">
+              <img src="assets/images/portfolio-1.webp" alt="Aura Spatial Audio" width="64" height="64" style="width:56px; height:56px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0;">
+              <div>
+                <div style="font-size:0.75rem; color:var(--color-orange); font-weight:700; text-transform:uppercase;">Branding & 3D</div>
+                <div style="font-size:0.95rem; font-weight:700; color:#fff;">Aura Spatial Audio</div>
+                <div style="font-size:0.75rem; color:var(--color-text-dim);">Aura Sound Labs</div>
+              </div>
+            </a>
+            <a href="project-details.html?project=portfolio-2" class="hero-mini-card" style="display:flex; align-items:center; gap:1rem; padding:0.85rem 1rem; background:rgba(22,22,34,0.6); border:1px solid var(--color-surface-border); border-radius:var(--radius-md); text-decoration:none;">
+              <img src="assets/images/portfolio-2.webp" alt="Nova Mobile App" width="64" height="64" style="width:56px; height:56px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0;">
+              <div>
+                <div style="font-size:0.75rem; color:var(--color-purple); font-weight:700; text-transform:uppercase;">UI/UX Architecture</div>
+                <div style="font-size:0.95rem; font-weight:700; color:#fff;">Nova Fintech Platform</div>
+                <div style="font-size:0.75rem; color:var(--color-text-dim);">Nova Bank Corp</div>
+              </div>
+            </a>
+            <a href="project-details.html?project=portfolio-3" class="hero-mini-card" style="display:flex; align-items:center; gap:1rem; padding:0.85rem 1rem; background:rgba(22,22,34,0.6); border:1px solid var(--color-surface-border); border-radius:var(--radius-md); text-decoration:none;">
+              <img src="assets/images/portfolio-3.webp" alt="Velocity Motors" width="64" height="64" style="width:56px; height:56px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0;">
+              <div>
+                <div style="font-size:0.75rem; color:var(--color-emerald); font-weight:700; text-transform:uppercase;">Web Engineering</div>
+                <div style="font-size:0.95rem; font-weight:700; color:#fff;">Velocity Hypercar Suite</div>
+                <div style="font-size:0.75rem; color:var(--color-text-dim);">Velocity Motors</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-container" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">Brand Identity <span>•</span></div>
+        <div class="marquee-item">UI/UX Architecture <span>•</span></div>
+        <div class="marquee-item">Creative Web Development <span>•</span></div>
+        <div class="marquee-item">Packaging Systems <span>•</span></div>
+        <div class="marquee-item">Motion Graphics & 3D <span>•</span></div>
+        <div class="marquee-item">Digital Marketing Funnels <span>•</span></div>
+        <div class="marquee-item">Brand Identity <span>•</span></div>
+        <div class="marquee-item">UI/UX Architecture <span>•</span></div>
+        <div class="marquee-item">Creative Web Development <span>•</span></div>
+        <div class="marquee-item">Packaging Systems <span>•</span></div>
+        <div class="marquee-item">Motion Graphics & 3D <span>•</span></div>
+        <div class="marquee-item">Digital Marketing Funnels <span>•</span></div>
+      </div>
+    </div>
+
+    <!-- 2. About Our Agency -->
+    <section class="section-py" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="section-eyebrow">About Our Agency</div>
+            <h2 class="section-title">Where Audacious Imagination Meets <span class="text-gradient">Precision Code.</span></h2>
+            <p>
+              Founded in New York, PixelCraft Studio was forged on the belief that safe design is invisible design. In an era saturated with cookie-cutter templates, we engineer tailor-made digital identities that demand cultural relevance.
+            </p>
+            <p>
+              Our multidisciplinary team unifies strategists, typographers, WebGL coders, and art directors under one shared obsession: delivering extraordinary craftsmanship that accelerates company valuation.
+            </p>
+
+            <div class="about-feature-list">
+              <div class="about-feature-box">
+                <h4>Radical Creativity</h4>
+                <p>We discard predictable layouts to build distinct visual systems that linger in minds.</p>
+              </div>
+              <div class="about-feature-box">
+                <h4>Engineering Rigor</h4>
+                <p>Zero bloat. Sub-second load times, fluid 60fps animations, and bulletproof responsive code.</p>
+              </div>
+              <div class="about-feature-box">
+                <h4>Commercial Clarity</h4>
+                <p>Every aesthetic decision is directly tethered to customer acquisition and retention.</p>
+              </div>
+              <div class="about-feature-box">
+                <h4>Collaborative Agility</h4>
+                <p>Transparent sprints, direct Slack channels with creative leads, and rapid prototyping.</p>
+              </div>
+            </div>
+
+            <div style="margin-top:2.5rem;">
+              <a href="about.html" class="btn btn-secondary">
+                Discover Our Story & Culture
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-images-collage">
+            <div class="about-img-item">
+              <img src="assets/images/about-studio.webp" alt="PixelCraft Studio New York creative workspace and design sprint" width="900" height="600" loading="lazy">
+            </div>
+            <div class="about-img-item">
+              <img src="assets/images/about-culture.webp" alt="Creative team manifesto and digital strategy workshop" width="900" height="600" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Our Services (Key 6 featured on homepage) -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Our Capabilities</div>
+          <h2 class="section-title">Bespoke Creative Solutions for <span class="text-gradient">Modern Brands</span></h2>
+          <p class="section-desc">From initial naming and visual identity to high-performance web platforms and viral digital marketing, our services are built to scale.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-brand-identity.webp" alt="Brand Identity Design by PixelCraft Studio" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Branding</span>
+              <h3 class="service-card-title">Brand Identity Design</h3>
+              <p class="service-card-desc">End-to-end brand guidelines, typography systems, tonal voice, and visual assets built for long-term equity.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Brand Guidelines & Stylebook</li>
+                  <li>Color Architecture & Typography</li>
+                  <li>Collateral & Stationery Sets</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=brand-identity" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Brand+Identity" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-ui-ux.webp" alt="UI/UX Design Interface by PixelCraft Studio" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Product Design</span>
+              <h3 class="service-card-title">UI/UX Design</h3>
+              <p class="service-card-desc">Frictionless digital products and mobile apps rooted in cognitive ergonomics, user psychology, and interactive design systems.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>User Journey & Wireframing</li>
+                  <li>Interactive Figma Prototypes</li>
+                  <li>Design Tokens & Micro-Interactions</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=ui-ux" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=UI%2FUX+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-web-development.webp" alt="Website Development by PixelCraft Studio" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Engineering</span>
+              <h3 class="service-card-title">Website Development</h3>
+              <p class="service-card-desc">High-performance digital flagships engineered with pure semantic code, WebGL canvases, and instantaneous load times.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Semantic HTML5/CSS3/Vanilla JS</li>
+                  <li>100% Lighthouse Performance Score</li>
+                  <li>Headless CMS & API Integration</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=web-development" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Web+Development" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-graphic-design.webp" alt="Graphic Design Collateral by PixelCraft Studio" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Visual Arts</span>
+              <h3 class="service-card-title">Graphic Design</h3>
+              <p class="service-card-desc">Arresting graphic posters, editorial book layouts, digital marketing suites, and billboard takeovers that command attention.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Editorial Catalogs & Magazines</li>
+                  <li>Billboard & OOH Advertising</li>
+                  <li>High-Resolution Vector Graphics</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=graphic-design" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Graphic+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-digital-marketing.webp" alt="Digital Marketing Campaign by PixelCraft Studio" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Performance</span>
+              <h3 class="service-card-title">Digital Marketing</h3>
+              <p class="service-card-desc">Data-backed conversion funnels, paid performance campaigns, and creative copywriting that scale customer acquisition.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Paid Ads Creative Direction</li>
+                  <li>Conversion Rate Optimization (CRO)</li>
+                  <li>Omnichannel Funnel Analytics</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=digital-marketing" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Digital+Marketing" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-photography.webp" alt="Commercial Photography by PixelCraft Studio" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Production</span>
+              <h3 class="service-card-title">Photography & Media</h3>
+              <p class="service-card-desc">Editorial macro studio photography and cinematic commercial video production that brings brand products to life.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Studio Macro Product Photography</li>
+                  <li>4K Cinematic Brand Commercials</li>
+                  <li>Color Grading & Digital Retouching</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=photography" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Photography" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:3.5rem;">
+          <a href="services.html" class="btn btn-secondary btn-lg">
+            Explore All 12 Capabilities
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Projects -->
+    <section class="section-py" id="portfolio">
+      <div class="container">
+        <div class="section-header" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1.5rem;">
+          <div>
+            <div class="section-eyebrow">Curated Showcase</div>
+            <h2 class="section-title">Selected Works with <span class="text-gradient">Measurable Proof.</span></h2>
+            <p class="section-desc">Sample case studies illustrating how we blend disruptive design with commercial efficacy.</p>
+          </div>
+          <a href="portfolio.html" class="btn btn-outline">View Complete Gallery →</a>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Featured 1 -->
+          <div class="project-card">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-1.webp" alt="Aura Spatial Audio Brand Identity & Packaging" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-1" class="btn btn-primary btn-sm">View Case Study</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Branding & Packaging</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Aura Sound Labs</span>
+              </div>
+              <h3 class="project-title">Aura Spatial Audio</h3>
+              <p class="project-desc">Complete visual architecture, acoustic wave identity system, and eco-luxury unboxing experience for next-gen spatial headphones.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.9rem;">+184% Conversion Rate</span>
+                <a href="project-details.html?project=portfolio-1" style="color:var(--color-orange); font-weight:700; font-size:0.9rem;">Read Study →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 2 -->
+          <div class="project-card">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-2.webp" alt="Luminary Financial App UI/UX Design System" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-2" class="btn btn-primary btn-sm">View Case Study</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">UI/UX Mobile Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Luminary Fintech</span>
+              </div>
+              <h3 class="project-title">Luminary Financial App</h3>
+              <p class="project-desc">A dark-mode wealth management mobile interface transforming algorithmic trading into intuitive, glanceable visual cards.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.9rem;">4.9/5 App Store Rating</span>
+                <a href="project-details.html?project=portfolio-2" style="color:var(--color-orange); font-weight:700; font-size:0.9rem;">Read Study →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 3 -->
+          <div class="project-card">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-3.webp" alt="Vortex Autonomous Mobility Editorial Web Experience" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-3" class="btn btn-primary btn-sm">View Case Study</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Editorial Web Experience</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Vortex Motors Inc</span>
+              </div>
+              <h3 class="project-title">Vortex Autonomous Mobility</h3>
+              <p class="project-desc">High-speed 3D vehicle configurator and editorial launch platform for a Level-4 electric sports sedan.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.9rem;">2.1M Global Page Views</span>
+                <a href="project-details.html?project=portfolio-3" style="color:var(--color-orange); font-weight:700; font-size:0.9rem;">Read Study →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 4 -->
+          <div class="project-card">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-5.webp" alt="Solstice Botanical Elixir Packaging Design" width="900" height="620" loading="lazy">
+              <div class="project-overlay">
+                <a href="project-details.html?project=portfolio-5" class="btn btn-primary btn-sm">View Case Study</a>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="badge badge-purple">Packaging Design</span>
+                <span style="font-size:0.85rem; color:var(--color-text-dim);">Solstice Organics</span>
+              </div>
+              <h3 class="project-title">Solstice Botanical Elixir</h3>
+              <p class="project-desc">Eco-luxury matte aluminum canister packaging and debossed botanical iconography placed in over 1,400 retail doors.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--color-surface-border); padding-top:1rem;">
+                <span style="color:var(--color-emerald); font-weight:700; font-size:0.9rem;">+215% Retail Velocity</span>
+                <a href="project-details.html?project=portfolio-5" style="color:var(--color-orange); font-weight:700; font-size:0.9rem;">Read Study →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Our Creative Process -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Methodology</div>
+          <h2 class="section-title">Our 5-Stage <span class="text-gradient">Creative Sprint</span></h2>
+          <p class="section-desc">A refined, battle-tested framework engineered to eliminate guesswork and deliver flawless digital outcomes on schedule.</p>
+        </div>
+
+        <div class="process-grid">
+          <!-- Step 1 -->
+          <div class="process-card">
+            <div class="process-step-num">01</div>
+            <h4>Discover</h4>
+            <p>We immerse in your market landscape, extract user pain points, and uncover unexploited brand positioning territories.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-card">
+            <div class="process-step-num">02</div>
+            <h4>Strategize</h4>
+            <p>We craft the architectural roadmap: core narratives, user journey funnels, design system tokens, and tech stack choices.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-card">
+            <div class="process-step-num">03</div>
+            <h4>Design</h4>
+            <p>Oversized typography, high-fidelity prototypes, 3D renderings, and kinetic micro-animations undergo rigorous reviews.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-card">
+            <div class="process-step-num">04</div>
+            <h4>Develop</h4>
+            <p>Engineered with zero bloat, semantic HTML5, pure CSS3, accessibility compliance, and cross-browser resilience.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-card">
+            <div class="process-step-num">05</div>
+            <h4>Deliver</h4>
+            <p>Comprehensive QA audits, Lighthouse performance optimization, team handoff workshops, and launch strategy execution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Why Choose Us -->
+    <section class="section-py">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">The PixelCraft Advantage</div>
+          <h2 class="section-title">Why Visionary Leaders <span class="text-gradient">Choose Us</span></h2>
+          <p class="section-desc">We operate as your dedicated design and technology taskforce, delivering work that earns awards and drives revenue.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">✦</div>
+            <h3>Creative Fearlessness</h3>
+            <p>We reject conservative, forgettable design. We craft distinct visual signatures that command immediate market differentiation.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">⚡</div>
+            <h3>Obsessive Craftsmanship</h3>
+            <p>Every kerning pair, bezier curve, animation curve, and code line is calibrated to the highest standards of international design.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">🎯</div>
+            <h3>Commercial Impact</h3>
+            <p>Design is not an expense—it is a multiplier. We align visual polish with your key performance indicators and revenue growth.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">🛡️</div>
+            <h3>Senior-Only Talent</h3>
+            <p>No junior handoffs. You collaborate directly with veteran creative directors, senior UX architects, and lead web engineers.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">⏱️</div>
+            <h3>Transparent Velocity</h3>
+            <p>Predictable sprint cycles, weekly staging previews, direct communication channels, and punctual project handoffs.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">🌐</div>
+            <h3>Global Perspective</h3>
+            <p>Our studio crafts visual languages that resonate with audiences across the Americas, Europe, Asia, and emerging markets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Our Achievements -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Demonstrated Excellence</div>
+          <h2 class="section-title">Numbers That Reflect <span class="text-gradient">Our Dedication</span></h2>
+          <p class="section-desc">Sample achievements across twelve years of creative partnership and digital engineering.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="counter-value" data-counter data-target="250" data-suffix="+">250+</div>
+            <div class="counter-label">Projects Launched</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="counter-value" data-counter data-target="180" data-suffix="+">180+</div>
+            <div class="counter-label">Happy Global Clients</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="counter-value" data-counter data-target="12" data-suffix="+">12+</div>
+            <div class="counter-label">Years of Innovation</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="counter-value" data-counter data-target="34" data-suffix="">34</div>
+            <div class="counter-label">International Awards</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Meet Our Team (Featured on homepage) -->
+    <section class="section-py" id="team">
+      <div class="container">
+        <div class="section-header" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1.5rem;">
+          <div>
+            <div class="section-eyebrow">Creative Minds</div>
+            <h2 class="section-title">The Artisans Behind <span class="text-gradient">The Magic</span></h2>
+            <p class="section-desc">A passionate collective of designers, technologists, and storytellers.</p>
+          </div>
+          <a href="team.html" class="btn btn-outline">Meet Full Studio Team →</a>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Member 1 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-1.webp" alt="Elena Vance - Creative Director & Founder" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=elena-vance">Elena Vance</a></h3>
+              <div class="team-role">Creative Director & Founder</div>
+              <p style="font-size:0.85rem; margin-bottom:1.25rem;">Ex-Pentagram director shaping emotional branding for over 14 years.</p>
+              <div class="team-socials">
+                <a href="team-details.html?member=elena-vance" class="btn btn-outline btn-sm" style="width:100%;">View Profile →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-2.webp" alt="Marcus Thorne - Lead UI/UX Designer" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=marcus-thorne">Marcus Thorne</a></h3>
+              <div class="team-role">Lead UI/UX Designer</div>
+              <p style="font-size:0.85rem; margin-bottom:1.25rem;">Obsessed with micro-interactions, ergonomics, and scalable design tokens.</p>
+              <div class="team-socials">
+                <a href="team-details.html?member=marcus-thorne" class="btn btn-outline btn-sm" style="width:100%;">View Profile →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-3.webp" alt="Sophia Chen - Senior Brand Identity Strategist" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=sophia-chen">Sophia Chen</a></h3>
+              <div class="team-role">Senior Brand Strategist</div>
+              <p style="font-size:0.85rem; margin-bottom:1.25rem;">Unifies ethnographic consumer research with striking typographic identity systems.</p>
+              <div class="team-socials">
+                <a href="team-details.html?member=sophia-chen" class="btn btn-outline btn-sm" style="width:100%;">View Profile →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Client Testimonials -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Client Feedback</div>
+          <h2 class="section-title">Endorsements from <span class="text-gradient">Visionary Partners</span></h2>
+          <p class="section-desc">Sample testimonials demonstrating our commitment to client success and design leadership.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "PixelCraft transformed Aura from a fledgling hardware prototype into an internationally coveted consumer luxury brand. Our pre-order waitlist exceeded every projection by 184%."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">JD</div>
+              <div>
+                <div class="testimonial-name">Julian Devereux</div>
+                <div class="testimonial-company">CEO, Aura Sound Labs (Demo)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "Their mastery of spatial UI and dark-mode ergonomics gave our fintech application an instant competitive edge. The app was featured in the Apple App Store on launch day!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background:linear-gradient(135deg, var(--color-orange), var(--color-amber));">SL</div>
+              <div>
+                <div class="testimonial-name">Sasha Lindqvist</div>
+                <div class="testimonial-company">Head of Product, Luminary Fintech (Demo)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "PixelCraft is that rare agency that pairs avant-garde artistic taste with ruthless engineering discipline. Sub-second page loads and pure visual elegance."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background:linear-gradient(135deg, var(--color-cyan), var(--color-purple));">AK</div>
+              <div>
+                <div class="testimonial-name">Arman Khavari</div>
+                <div class="testimonial-company">VP of Marketing, Vortex Motors (Demo)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Industries We Elevate -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Sector Expertise</div>
+          <h2 class="section-title">Industries We <span class="text-gradient">Transform</span></h2>
+          <p class="section-desc">Tailored creative strategy, branding, and digital engineering across six high-growth sectors.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.85rem;">Fintech & AI</span>
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:0.5rem;">Digital Finance & SaaS</h3>
+            <p style="font-size:0.9rem;">High-trust mobile wealth interfaces, design tokens, and interactive web applications engineered for clarity.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.85rem;">Consumer Tech</span>
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:0.5rem;">Hardware & Spatial Audio</h3>
+            <p style="font-size:0.9rem;">3D product storytelling, unboxing packaging systems, and pre-order flagship storefronts.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.85rem;">Lifestyle & Beauty</span>
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:0.5rem;">Luxury Skincare & Retail</h3>
+            <p style="font-size:0.9rem;">Tactile foil packaging, editorial photography, and omnichannel social launch campaigns.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.85rem;">Mobility</span>
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:0.5rem;">EV & Autonomous Vehicles</h3>
+            <p style="font-size:0.9rem;">Real-time 3D WebGL vehicle configurators and futuristic cockpit HUD design systems.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.85rem;">Culture & Events</span>
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:0.5rem;">Festivals & Apparel</h3>
+            <p style="font-size:0.9rem;">Kinetic stage motion identities, neo-brutalist apparel capsules, and viral lookbooks.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.85rem;">Architecture</span>
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:0.5rem;">Built Environment</h3>
+            <p style="font-size:0.9rem;">Minimalist editorial monographs and serene digital galleries for visionary studios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Latest Studio Journal & Creative Stack -->
+    <section class="section-py">
+      <div class="container">
+        <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1.5rem;">
+          <div>
+            <div class="section-eyebrow">Studio Journal</div>
+            <h2 class="section-title" style="margin-bottom:0;">Fresh Insights & <span class="text-gradient">Dispatches</span></h2>
+          </div>
+          <a href="blog.html" class="btn btn-outline">Read All Essays →</a>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="blog-details.html" class="card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+            <div style="aspect-ratio:16/10; overflow:hidden;">
+              <img src="assets/images/blog-1.webp" alt="Spatial UI Architecture" width="800" height="500" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div style="padding:1.5rem;">
+              <span class="badge badge-purple" style="margin-bottom:0.65rem;">Design Trends</span>
+              <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">The Evolution of Spatial UI</h3>
+              <p style="font-size:0.88rem; margin:0;">Exploring volumetric depth and frosted glass surfaces in next-gen digital interfaces.</p>
+            </div>
+          </a>
+
+          <a href="blog-details.html" class="card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+            <div style="aspect-ratio:16/10; overflow:hidden;">
+              <img src="assets/images/blog-4.webp" alt="Typography as Voice" width="800" height="500" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div style="padding:1.5rem;">
+              <span class="badge badge-orange" style="margin-bottom:0.65rem;">Branding</span>
+              <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Typography as Brand Voice</h3>
+              <p style="font-size:0.88rem; margin:0;">How oversized editorial typefaces anchor memorable identities across print and web.</p>
+            </div>
+          </a>
+
+          <a href="blog-details.html" class="card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+            <div style="aspect-ratio:16/10; overflow:hidden;">
+              <img src="assets/images/blog-6.webp" alt="Sustainable Web Design" width="800" height="500" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div style="padding:1.5rem;">
+              <span class="badge badge-purple" style="margin-bottom:0.65rem;">Web Engineering</span>
+              <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Sub-Second Responsive Craft</h3>
+              <p style="font-size:0.88rem; margin:0;">Engineering lean HTML5, CSS3, and WebP pipelines with zero visual compromise.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Final Call to Action -->
+    <section class="section-py" style="padding-top:0;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="ambient-glow glow-purple" style="top:-80px; left:20%;"></div>
+          <div class="section-eyebrow" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.3);">Let's Build the Future</div>
+          <h2>Have a Creative Project in Mind?</h2>
+          <p>
+            Whether launching an audacious new brand identity, engineering an award-winning web platform, or redesigning a flagship application, our studio is ready.
+          </p>
+          <div class="cta-btns">
+            <a href="start-project.html" class="btn btn-secondary btn-lg">
+              Start a Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Homepage">
+            <img src="assets/images/logo-teal.webp" alt="Stackly Logo" class="logo-img" width="144" height="57">
+          </a>
+          <p class="footer-desc">
+            Mobilizing intelligent financial tracking, automated category allocations, food security envelopes, and personalized wealth planning for modern life.
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="services.html">Platform Features</a>
+            <a href="portfolio.html">Expense Categories</a>
+            <a href="team.html">Expense Management</a>
+            <a href="pricing.html">Budget Planner</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h5>Support</h5>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="about.html">Terms & Agreements</a>
+            <a href="pricing.html">Security Audits</a>
+            <a href="services.html">Cashflow Reports</a>
+            <a href="portfolio.html">Savings Vaults</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p class="newsletter-desc">Get quarterly financial updates, smart budgeting alerts, and platform feature reports.</p>
+          <form class="footer-newsletter-form" aria-label="Newsletter Subscription Form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required aria-label="Your Email">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start a Project — PixelCraft Studio | Creative Agency</title>
+  <meta name="description" content="Initiate your next creative project with PixelCraft Studio. Submit your brief for branding, UI/UX, or bespoke web development.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span>DEMO PREVIEW:</span> PixelCraft Studio portfolio showcase. All client references, metrics, and inquiry forms are simulated.
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="PixelCraft Studio Homepage">
+        <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="144" height="57">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="start-project.html" class="btn btn-secondary btn-sm">Start a Project</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="130" height="51">
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu" style="background:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>→</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+        <a href="services.html" class="mobile-nav-link">Our Services <span>→</span></a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio <span>→</span></a>
+        <a href="team.html" class="mobile-nav-link">Our Team <span>→</span></a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing Plans <span>→</span></a>
+        <a href="blog.html" class="mobile-nav-link">Studio Blog <span>→</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us <span>→</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="start-project.html" class="btn btn-secondary btn-block">Start a Project</a>
+      <div class="mobile-drawer-contact">
+        <div class="drawer-contact-title">Direct Studio Contact</div>
+        <a href="mailto:hello@pixelcraft.studio" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#9993;</span>
+          <span class="drawer-contact-text">hello@pixelcraft.studio</span>
+        </a>
+        <a href="tel:+15557493527" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128222;</span>
+          <span class="drawer-contact-text">+1 (555) 749-3527</span>
+        </a>
+        <div class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128205;</span>
+          <span class="drawer-contact-text">New York &bull; London &bull; Tokyo</span>
+        </div>
+        <div class="drawer-contact-hours">&#9201; Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM EST</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Header -->
+    <section class="section-py" style="padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: 2rem;">
+      <div class="container text-center" style="max-width:900px;">
+        <div class="section-eyebrow">Project Inquiry</div>
+        <h1 class="section-title">Let's Engineer Your <span class="text-gradient">Next Masterpiece.</span></h1>
+        <p class="section-desc" style="margin: 0 auto 2rem auto;">
+          Fill out this discovery brief to help our creative directors understand your objectives, budget, and scope. All inquiries receive personal review.
+        </p>
+        <div style="border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--color-surface-border); box-shadow:var(--shadow-lg), var(--shadow-glow-purple);">
+          <img src="assets/images/start-hero.webp" alt="Creative studio mood board, laptop, and sketchbooks prepared for project discovery" width="1000" height="685" loading="eager" fetchpriority="high" style="width:100%; max-height:500px; object-fit:cover; display:block;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Form Container -->
+    <section class="section-py" style="padding-top:0;">
+      <div class="container" style="max-width:880px;">
+        <div class="card" style="padding: clamp(1.75rem, 5vw, 3.5rem); border-color:var(--color-surface-border-hover);">
+          
+          <form id="startProjectForm" novalidate>
+            
+            <!-- Section 1: Contact Details -->
+            <h3 style="font-size:1.25rem; color:#fff; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid var(--color-surface-border);">
+              1. Your Contact Information
+            </h3>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" class="form-control" placeholder="e.g. Alexander Wright" required>
+                <div class="form-error">Please enter your full name (at least 2 characters).</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="emailAddress">Work Email Address <span class="required">*</span></label>
+                <input type="email" id="emailAddress" class="form-control" placeholder="alex@company.com" required>
+                <div class="form-error">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="mobileNumber">Mobile Number (Exactly 10 Digits) <span class="required">*</span></label>
+                <input type="tel" id="mobileNumber" class="form-control" placeholder="10 digits e.g. 5558901234" maxlength="10" required>
+                <div class="form-hint">Numbers only without dashes or spaces.</div>
+                <div class="form-error">Please enter exactly 10 digits mobile number.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="companyName">Company / Organization Name (Optional)</label>
+                <input type="text" id="companyName" class="form-control" placeholder="e.g. Apex Innovations Corp">
+              </div>
+            </div>
+
+            <!-- Section 2: Project Specifications -->
+            <h3 style="font-size:1.25rem; color:#fff; margin:2rem 0 1.25rem 0; padding-bottom:0.75rem; border-bottom:1px solid var(--color-surface-border);">
+              2. Scope & Service Selection
+            </h3>
+
+            <div class="grid grid-3">
+              <!-- Select Service -->
+              <div class="form-group">
+                <label class="form-label" for="projectService">Select Service <span class="required">*</span></label>
+                <select id="projectService" class="form-control" required>
+                  <option value="" disabled selected>Choose a capability...</option>
+                  <option value="brand-identity">Brand Identity Design</option>
+                  <option value="logo-design">Logo Design</option>
+                  <option value="website-design">Website Design</option>
+                  <option value="website-development">Website Development</option>
+                  <option value="ui-ux-design">UI/UX Design</option>
+                  <option value="graphic-design">Graphic Design</option>
+                  <option value="social-marketing">Social Media Marketing</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="motion-graphics">Motion Graphics</option>
+                  <option value="photography">Photography and Videography</option>
+                  <option value="packaging-design">Packaging Design</option>
+                  <option value="creative-strategy">Creative Strategy</option>
+                </select>
+                <div class="form-error">Please select a service.</div>
+              </div>
+
+              <!-- Budget Range -->
+              <div class="form-group">
+                <label class="form-label" for="projectBudget">Project Budget Range <span class="required">*</span></label>
+                <select id="projectBudget" class="form-control" required>
+                  <option value="" disabled selected>Estimated investment...</option>
+                  <option value="under-5k">&lt; $5,000 (Small Sprint)</option>
+                  <option value="5k-15k">$5,000 – $15,000 (Standard)</option>
+                  <option value="15k-30k">$15,000 – $30,000 (Growth)</option>
+                  <option value="30k-50k">$30,000 – $50,000 (Enterprise)</option>
+                  <option value="50k-plus">$50,000+ (Full Suite Flagship)</option>
+                </select>
+                <div class="form-error">Please select your estimated budget.</div>
+              </div>
+
+              <!-- Timeline -->
+              <div class="form-group">
+                <label class="form-label" for="projectTimeline">Expected Timeline <span class="required">*</span></label>
+                <select id="projectTimeline" class="form-control" required>
+                  <option value="" disabled selected>Launch window...</option>
+                  <option value="urgent">Urgent (2 – 4 Weeks)</option>
+                  <option value="1-2-months">1 – 2 Months</option>
+                  <option value="2-3-months">2 – 3 Months</option>
+                  <option value="flexible">Flexible / Planning Phase</option>
+                </select>
+                <div class="form-error">Please select an expected project timeline.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="referenceWebsite">Reference Website or Inspiration URL (Optional)</label>
+              <input type="url" id="referenceWebsite" class="form-control" placeholder="https://example.com/inspiration">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="projectDescription">Project Description & Goals <span class="required">*</span></label>
+              <textarea id="projectDescription" class="form-control" rows="5" placeholder="Describe your product, target audience, core challenges, and what success looks like for this engagement (min 15 characters)..." required></textarea>
+              <div class="form-error">Please describe your project (at least 15 characters).</div>
+            </div>
+
+            <!-- Section 3: File Attachment -->
+            <h3 style="font-size:1.25rem; color:#fff; margin:2rem 0 1.25rem 0; padding-bottom:0.75rem; border-bottom:1px solid var(--color-surface-border);">
+              3. Brief or Pitch Deck Attachment (Optional)
+            </h3>
+
+            <div class="form-group">
+              <div class="file-dropzone" id="dropzoneArea">
+                <input type="file" id="projectAttachment" accept=".pdf,.doc,.docx,.png,.jpg,.webp,.zip">
+                <div style="font-size:2rem; margin-bottom:0.5rem; color:var(--color-orange);">📄</div>
+                <div style="font-weight:700; color:#fff; font-size:1rem; margin-bottom:0.25rem;">
+                  Drag & Drop Pitch Deck or Click to Browse
+                </div>
+                <div style="font-size:0.8rem; color:var(--color-text-dim);">
+                  PDF, DOCX, ZIP, PNG or WebP files accepted (Max 15MB demo simulation)
+                </div>
+              </div>
+
+              <!-- Selected File Info Preview -->
+              <div class="file-info-preview" id="fileInfoPreview">
+                <div style="display:flex; align-items:center; gap:0.6rem;">
+                  <span style="color:var(--color-emerald);">✓ Attached:</span>
+                  <span id="attachedFileName" style="font-weight:700; color:#fff; font-size:0.9rem;"></span>
+                </div>
+                <button type="button" class="file-remove-btn" id="fileRemoveBtn">Remove File ✕</button>
+              </div>
+            </div>
+
+            <div style="margin-top:2.5rem;">
+              <button type="submit" class="btn btn-secondary btn-lg btn-block" style="font-size:1.1rem; padding:1.1rem 2rem;">
+                Submit Project Discovery Brief
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <p style="text-align:center; font-size:0.8rem; color:var(--color-text-dim); margin-top:0.75rem;">
+                Front-end demo simulation: Submitting will display an immediate confirmation modal and save the inquiry to the Admin Dashboard session.
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Step Onboarding Roadmap -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">What Happens Next</div>
+          <h2 class="section-title">Your 4-Step <span class="text-gradient">Onboarding Roadmap</span></h2>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="why-icon-box">01</div>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">24h Brief Review</h4>
+            <p style="font-size:0.86rem; margin:0;">A principal creative director reviews your goals, timeline, and reference links.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">02</div>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Discovery Call</h4>
+            <p style="font-size:0.86rem; margin:0;">30-minute alignment session to clarify scope, deliverables, and milestones.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">03</div>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Sprint Proposal</h4>
+            <p style="font-size:0.86rem; margin:0;">Receive a fixed-milestone schedule, transparent estimate, and creative direction plan.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">04</div>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Studio Kickoff</h4>
+            <p style="font-size:0.86rem; margin:0;">Gain portal access and begin Week 1 design & engineering sprints immediately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confidentiality & IP Assurance -->
+    <section class="section-py">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Confidentiality</span>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Strict NDA Protection</h4>
+            <p style="font-size:0.86rem; margin:0;">Every attached brief, deck, and prototype remains strictly private under mutual NDA.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.75rem;">Ownership</span>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">100% Full IP Transfer</h4>
+            <p style="font-size:0.86rem; margin:0;">You own all final vectors, Figma files, 3D scenes, and production source code.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Flexibility</span>
+            <h4 style="color:#fff; margin-bottom:0.4rem;">Transparent Pricing</h4>
+            <p style="font-size:0.86rem; margin:0;">Zero hidden fees — explore our <a href="pricing.html" style="color:var(--color-orange); text-decoration:underline;">configurable sample tiers</a> anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Success Confirmation Modal -->
+  <div class="modal-backdrop" id="inquirySuccessModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle" style="display:flex; align-items:center; gap:0.6rem;">
+          <span style="color:var(--color-emerald);">✓</span> Inquiry Received!
+        </h3>
+        <button class="modal-close-btn" data-modal-close aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <div style="width:64px; height:64px; border-radius:50%; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem auto; font-size:1.8rem; color:var(--color-emerald);">
+            ✓
+          </div>
+          <h4 style="color:#ffffff; font-size:1.35rem; margin-bottom:0.4rem;">Thank You, <span id="modalSummaryName">Client</span></h4>
+          <p style="font-size:0.95rem; color:var(--color-text-muted);">
+            Your project inquiry has been successfully simulated and logged into the PixelCraft Studio workspace!
+          </p>
+        </div>
+
+        <div class="card" style="padding:1.25rem; background:#11111a; border-color:var(--color-surface-border); margin-bottom:1.5rem;">
+          <div style="font-size:0.8rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">
+            Submission Snapshot
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.9rem;">
+            <div><strong style="color:#fff;">Contact Email:</strong> <span id="modalSummaryEmail"></span></div>
+            <div><strong style="color:#fff;">Mobile Number:</strong> <span id="modalSummaryPhone"></span></div>
+            <div><strong style="color:#fff;">Selected Service:</strong> <span id="modalSummaryService" class="badge badge-purple"></span></div>
+            <div><strong style="color:#fff;">Attachment:</strong> <span id="modalSummaryFile" style="color:var(--color-text-muted);"></span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,87,34,0.1); border:1px solid rgba(255,87,34,0.25); border-radius:var(--radius-md); padding:1rem; font-size:0.85rem; color:var(--color-orange);">
+          <strong>Demo Notice:</strong> This inquiry has been stored locally in your browser session. You can view, manage, and change its review status directly within the <a href="admin-dashboard.html" style="text-decoration:underline; font-weight:700; color:#fff;">Admin Dashboard</a>.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="admin-dashboard.html" class="btn btn-primary btn-sm">View in Admin Dashboard</a>
+        <button type="button" class="btn btn-outline btn-sm" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Homepage">
+            <img src="assets/images/logo-teal.webp" alt="Stackly Logo" class="logo-img" width="144" height="57">
+          </a>
+          <p class="footer-desc">
+            Mobilizing intelligent financial tracking, automated category allocations, food security envelopes, and personalized wealth planning for modern life.
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="services.html">Platform Features</a>
+            <a href="portfolio.html">Expense Categories</a>
+            <a href="team.html">Expense Management</a>
+            <a href="pricing.html">Budget Planner</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h5>Support</h5>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="about.html">Terms & Agreements</a>
+            <a href="pricing.html">Security Audits</a>
+            <a href="services.html">Cashflow Reports</a>
+            <a href="portfolio.html">Savings Vaults</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p class="newsletter-desc">Get quarterly financial updates, smart budgeting alerts, and platform feature reports.</p>
+          <form class="footer-newsletter-form" aria-label="Newsletter Subscription Form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required aria-label="Your Email">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team — PixelCraft Studio | Creative Agency</title>
+  <meta name="description" content="Meet the multidisciplinary creative directors, UX architects, typographers, and technologists at PixelCraft Studio.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span>DEMO PREVIEW:</span> PixelCraft Studio portfolio showcase. All client references, metrics, and inquiry forms are simulated.
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="PixelCraft Studio Homepage">
+        <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="144" height="57">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="team.html" class="nav-link active">Our Team</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="start-project.html" class="btn btn-primary btn-sm">Start a Project</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="130" height="51">
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu" style="background:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>→</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+        <a href="services.html" class="mobile-nav-link">Our Services <span>→</span></a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio <span>→</span></a>
+        <a href="team.html" class="mobile-nav-link active">Our Team <span>→</span></a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing Plans <span>→</span></a>
+        <a href="blog.html" class="mobile-nav-link">Studio Blog <span>→</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us <span>→</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="start-project.html" class="btn btn-secondary btn-block">Start a Project</a>
+      <div class="mobile-drawer-contact">
+        <div class="drawer-contact-title">Direct Studio Contact</div>
+        <a href="mailto:hello@pixelcraft.studio" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#9993;</span>
+          <span class="drawer-contact-text">hello@pixelcraft.studio</span>
+        </a>
+        <a href="tel:+15557493527" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128222;</span>
+          <span class="drawer-contact-text">+1 (555) 749-3527</span>
+        </a>
+        <div class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128205;</span>
+          <span class="drawer-contact-text">New York &bull; London &bull; Tokyo</span>
+        </div>
+        <div class="drawer-contact-hours">&#9201; Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM EST</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Header -->
+    <section class="section-py" style="padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: 2.5rem;">
+      <div class="container text-center">
+        <div class="section-eyebrow">Creative Collective</div>
+        <h1 class="section-title">The Master Craftsmen of <span class="text-gradient">PixelCraft</span></h1>
+        <p class="section-desc" style="margin: 0 auto 2.5rem auto;">
+          We are a tight-knit guild of creative directors, UI/UX researchers, kinetic animators, and software engineers who live to push digital boundaries.
+        </p>
+        <div style="max-width:1000px; margin:0 auto; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--color-surface-border); box-shadow:var(--shadow-lg), var(--shadow-glow-purple);">
+          <img src="assets/images/team-hero.webp" alt="Creative agency directors and specialists collaborating around moodboards and laptops" width="900" height="900" loading="eager" fetchpriority="high" style="width:100%; max-height:520px; object-fit:cover; object-position:center 25%; display:block;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Grid (6 members) -->
+    <section class="section-py" style="padding-top:0;">
+      <div class="container">
+        <div class="grid grid-3">
+          
+          <!-- Member 1 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-1.webp" alt="Elena Vance portrait" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=elena-vance">Elena Vance</a></h3>
+              <div class="team-role">Creative Director & Founder</div>
+              <p style="font-size:0.88rem; margin-bottom:1.25rem;">Ex-Pentagram senior director guiding brand narrative and spatial typography for over 14 years.</p>
+              <div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:1.25rem;">
+                <span class="badge badge-purple">Spatial UI</span>
+                <span class="badge badge-purple">Brand Narrative</span>
+              </div>
+              <a href="team-details.html?member=elena-vance" class="btn btn-outline btn-sm btn-block">View Full Profile →</a>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-2.webp" alt="Marcus Thorne portrait" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=marcus-thorne">Marcus Thorne</a></h3>
+              <div class="team-role">Lead UI/UX Designer</div>
+              <p style="font-size:0.88rem; margin-bottom:1.25rem;">Specializes in design systems, micro-interactions, and complex SaaS/fintech product architectures.</p>
+              <div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:1.25rem;">
+                <span class="badge badge-purple">Design Systems</span>
+                <span class="badge badge-purple">Fintech UX</span>
+              </div>
+              <a href="team-details.html?member=marcus-thorne" class="btn btn-outline btn-sm btn-block">View Full Profile →</a>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-3.webp" alt="Sophia Chen portrait" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=sophia-chen">Sophia Chen</a></h3>
+              <div class="team-role">Senior Brand Identity Strategist</div>
+              <p style="font-size:0.88rem; margin-bottom:1.25rem;">Synthesizes ethnographic research into fearless visual systems and tactile packaging concepts.</p>
+              <div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:1.25rem;">
+                <span class="badge badge-purple">Packaging</span>
+                <span class="badge badge-purple">Positioning</span>
+              </div>
+              <a href="team-details.html?member=sophia-chen" class="btn btn-outline btn-sm btn-block">View Full Profile →</a>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-4.webp" alt="Alex Rivera portrait" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=alex-rivera">Alex Rivera</a></h3>
+              <div class="team-role">Lead Full-Stack Web Developer</div>
+              <p style="font-size:0.88rem; margin-bottom:1.25rem;">Creative technologist delivering high-speed web apps with WebGL, headless CMS, and zero bloat.</p>
+              <div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:1.25rem;">
+                <span class="badge badge-purple">WebGL & 3D</span>
+                <span class="badge badge-purple">JavaScript</span>
+              </div>
+              <a href="team-details.html?member=alex-rivera" class="btn btn-outline btn-sm btn-block">View Full Profile →</a>
+            </div>
+          </div>
+
+          <!-- Member 5 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-5.webp" alt="Liam O'Connor portrait" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=liam-oconnor">Liam O'Connor</a></h3>
+              <div class="team-role">Commercial Photographer & Art Director</div>
+              <p style="font-size:0.88rem; margin-bottom:1.25rem;">Capturing breathtaking product macro photography and directing 4K cinematic commercial film anthems.</p>
+              <div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:1.25rem;">
+                <span class="badge badge-purple">Macro Studio</span>
+                <span class="badge badge-purple">Cinematography</span>
+              </div>
+              <a href="team-details.html?member=liam-oconnor" class="btn btn-outline btn-sm btn-block">View Full Profile →</a>
+            </div>
+          </div>
+
+          <!-- Member 6 -->
+          <div class="team-card">
+            <div class="team-media">
+              <img src="assets/images/team-6.webp" alt="Maya Patel portrait" width="600" height="600" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name"><a href="team-details.html?member=maya-patel">Maya Patel</a></h3>
+              <div class="team-role">Digital Marketing & Content Lead</div>
+              <p style="font-size:0.88rem; margin-bottom:1.25rem;">Merges performance growth funnels with viral social media video strategies for enterprise brands.</p>
+              <div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:1.25rem;">
+                <span class="badge badge-purple">Viral Growth</span>
+                <span class="badge badge-purple">CRO Funnels</span>
+              </div>
+              <a href="team-details.html?member=maya-patel" class="btn btn-outline btn-sm btn-block">View Full Profile →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Culture & Creative Rituals -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Life at PixelCraft</div>
+          <h2 class="section-title">How Our Collective <span class="text-gradient">Operates</span></h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="why-icon-box">01</div>
+            <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Weekly Critique Salons</h3>
+            <p style="font-size:0.88rem; margin:0;">Every Friday, every designer, developer, and strategist critiques work-in-progress side-by-side.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">02</div>
+            <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Deep-Work Focus Blocks</h3>
+            <p style="font-size:0.88rem; margin:0;">Zero internal meetings on Tuesdays and Thursdays so specialists stay in uninterrupted creative flow.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">03</div>
+            <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Open R&D Sandbox</h3>
+            <p style="font-size:0.88rem; margin:0;">20% of studio time is dedicated to experimental WebGL shaders, kinetic typography, and spatial UI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Creative Positions -->
+    <section class="section-py">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Careers</div>
+          <h2 class="section-title">Join Our <span class="text-gradient">Creative Guild</span></h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">New York / Remote</span>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Senior Motion & 3D Designer</h3>
+            <p style="font-size:0.88rem; margin-bottom:1.25rem;">Craft Cinema 4D product animations, tactile brand reveals, and WebGL motion assets.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm" style="align-self:flex-start;">Apply Now →</a>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.75rem;">London / Hybrid</span>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Lead UI/UX Systems Architect</h3>
+            <p style="font-size:0.88rem; margin-bottom:1.25rem;">Design multi-brand Figma token libraries and high-conversion web applications.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm" style="align-self:flex-start;">Apply Now →</a>
+          </div>
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Tokyo / Remote</span>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Creative Front-End Engineer</h3>
+            <p style="font-size:0.88rem; margin-bottom:1.25rem;">Build ultra-fast HTML5, CSS3, and Three.js interactive brand flagships.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm" style="align-self:flex-start;">Apply Now →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container text-center">
+        <h2>Want to Collaborate Directly with our Leads?</h2>
+        <p class="section-desc" style="margin: 1rem auto 2.5rem auto;">We take on only 4 client engagements per quarter to guarantee senior attention.</p>
+        <a href="start-project.html" class="btn btn-secondary btn-lg">Book a Studio Consultation</a>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Homepage">
+            <img src="assets/images/logo-teal.webp" alt="Stackly Logo" class="logo-img" width="144" height="57">
+          </a>
+          <p class="footer-desc">
+            Mobilizing intelligent financial tracking, automated category allocations, food security envelopes, and personalized wealth planning for modern life.
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="services.html">Platform Features</a>
+            <a href="portfolio.html">Expense Categories</a>
+            <a href="team.html">Expense Management</a>
+            <a href="pricing.html">Budget Planner</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h5>Support</h5>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="about.html">Terms & Agreements</a>
+            <a href="pricing.html">Security Audits</a>
+            <a href="services.html">Cashflow Reports</a>
+            <a href="portfolio.html">Savings Vaults</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p class="newsletter-desc">Get quarterly financial updates, smart budgeting alerts, and platform feature reports.</p>
+          <form class="footer-newsletter-form" aria-label="Newsletter Subscription Form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required aria-label="Your Email">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

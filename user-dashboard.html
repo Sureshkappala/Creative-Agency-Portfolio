@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard — PixelCraft Studio</title>
+  <meta name="description" content="Manage your active creative design projects, milestones, asset reviews, and studio messages.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: #0b0b12;">
+
+  <!-- Sticky Top Navbar with Dashboard Header -->
+  <header class="navbar dashboard-navbar" style="border-bottom-color: var(--color-surface-border);">
+    <div class="container navbar-inner" style="max-width:100%; padding: 0 1.75rem;">
+      <div style="display:flex; align-items:center; gap:0.85rem;">
+        <button id="dashboardSidebarToggle" aria-label="Toggle Sidebar Menu" class="btn btn-outline btn-sm dashboard-sidebar-toggle" style="padding:0.45rem 0.85rem;">
+          ☰ Menu
+        </button>
+        <a href="user-dashboard.html" class="brand-logo" aria-label="PixelCraft Studio Client Dashboard">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="135" height="53">
+          <small class="dashboard-brand-tag" style="font-size:0.75rem; color:var(--color-lavender); font-weight:600; text-transform:uppercase; letter-spacing:0.1em; margin-left:0.35rem;">Client Portal</small>
+        </a>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:1.25rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <img src="assets/images/team-4.webp" alt="Alex Wright" width="38" height="38" style="width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid var(--color-orange);">
+          <div class="dashboard-user-info">
+            <div style="font-size:0.88rem; font-weight:700; color:#fff;">Alex Wright</div>
+            <div style="font-size:0.75rem; color:var(--color-lavender);">Apex Innovations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="dashboard-sidebar" aria-label="User Navigation Sidebar">
+      <div>
+        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-text-dim); margin-bottom:1rem; padding-left:0.5rem;">
+          Client Navigation
+        </div>
+        <nav class="dashboard-nav">
+          <div class="dashboard-nav-item active" data-tab="tab-overview">
+            <span>📊</span> Dashboard Overview
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-projects">
+            <span>📁</span> My Projects
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-progress">
+            <span>📈</span> Project Progress
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-requests">
+            <span>📝</span> Project Requests
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-messages">
+            <span>💬</span> Messages <span class="badge badge-orange" style="margin-left:auto; font-size:0.7rem;">2 New</span>
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-saved">
+            <span>⭐</span> Saved Portfolio Projects
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-profile">
+            <span>👤</span> Profile
+          </div>
+          <div class="dashboard-nav-item" data-tab="tab-settings">
+            <span>⚙️</span> Settings
+          </div>
+        </nav>
+      </div>
+
+      <div style="border-top:1px solid var(--color-surface-border); padding-top:1.25rem; margin-top:2rem; display:flex; flex-direction:column; gap:0.65rem;">
+        <a href="index.html" class="btn btn-outline btn-sm btn-block">← Back to Main Site</a>
+        <a href="login.html" class="btn btn-outline btn-sm btn-block dashboard-logout-btn" style="color:var(--color-rose); border-color:rgba(244,63,94,0.35); display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-content">
+      
+      <!-- TAB 1: OVERVIEW -->
+      <section class="dashboard-tab-panel active" id="tab-overview">
+        <div class="dashboard-header-bar">
+          <div>
+            <h1 style="font-size:2rem; color:#fff; margin-bottom:0.35rem;">Welcome back, Alex</h1>
+            <p style="font-size:0.95rem; margin-bottom:0;">Here is the real-time status of your active creative sprints with PixelCraft Studio.</p>
+          </div>
+          <button class="btn btn-primary btn-sm" data-modal-open="newProjectModal">+ Request Sprints</button>
+        </div>
+
+        <!-- Metric Summary Cards -->
+        <div class="stats-cards-grid">
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.85rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Active Projects</span>
+              <span style="color:var(--color-purple);">📁</span>
+            </div>
+            <div class="stat-metric-val">3</div>
+            <div class="stat-metric-change stat-up">2 In Final Stage</div>
+          </div>
+
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.85rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Milestones Delivered</span>
+              <span style="color:var(--color-emerald);">✓</span>
+            </div>
+            <div class="stat-metric-val">14 / 16</div>
+            <div class="stat-metric-change stat-up">88% Completion</div>
+          </div>
+
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.85rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Pending Asset Reviews</span>
+              <span style="color:var(--color-orange);">⏳</span>
+            </div>
+            <div class="stat-metric-val">1</div>
+            <div class="stat-metric-change stat-up">Aura Packaging V2</div>
+          </div>
+
+          <div class="stat-metric-card">
+            <div class="stat-metric-header">
+              <span style="font-size:0.85rem; font-weight:700; color:var(--color-lavender); text-transform:uppercase;">Unread Messages</span>
+              <span style="color:var(--color-cyan);">✉</span>
+            </div>
+            <div class="stat-metric-val">2</div>
+            <div class="stat-metric-change stat-up">From Creative Lead</div>
+          </div>
+        </div>
+
+        <!-- Active Projects Snapshot -->
+        <div class="card" style="margin-bottom:2.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3 style="font-size:1.25rem; color:#fff;">Active Sprints in Progress</h3>
+            <span class="badge badge-purple">Live Sync (Demo)</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Project Name</th>
+                  <th>Discipline</th>
+                  <th>Lead Director</th>
+                  <th>Progress</th>
+                  <th>Status</th>
+                  <th style="text-align:right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Apex Brand Identity System</strong></td>
+                  <td>Branding & Typography</td>
+                  <td>Elena Vance</td>
+                  <td>
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                      <div style="width:100px; height:8px; background:#222; border-radius:4px; overflow:hidden;">
+                        <div style="width:85%; height:100%; background:var(--color-purple);"></div>
+                      </div>
+                      <span style="font-size:0.82rem; font-weight:700; color:#fff;">85%</span>
+                    </div>
+                  </td>
+                  <td><span class="status-pill status-in-progress">In Review</span></td>
+                  <td style="text-align:right;">
+                    <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm">Inspect Assets</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>Nova Fintech Mobile App UX</strong></td>
+                  <td>UI/UX Design</td>
+                  <td>Marcus Thorne</td>
+                  <td>
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                      <div style="width:100px; height:8px; background:#222; border-radius:4px; overflow:hidden;">
+                        <div style="width:60%; height:100%; background:var(--color-orange);"></div>
+                      </div>
+                      <span style="font-size:0.82rem; font-weight:700; color:#fff;">60%</span>
+                    </div>
+                  </td>
+                  <td><span class="status-pill status-in-progress">In Development</span></td>
+                  <td style="text-align:right;">
+                    <a href="project-details.html?project=portfolio-2" class="btn btn-outline btn-sm">Inspect Assets</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>Aura Luxury Eco-Packaging</strong></td>
+                  <td>Packaging & 3D</td>
+                  <td>Sophia Chen</td>
+                  <td>
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                      <div style="width:100px; height:8px; background:#222; border-radius:4px; overflow:hidden;">
+                        <div style="width:100%; height:100%; background:var(--color-emerald);"></div>
+                      </div>
+                      <span style="font-size:0.82rem; font-weight:700; color:#fff;">100%</span>
+                    </div>
+                  </td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td style="text-align:right;">
+                    <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm">Download ZIP</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent Communications -->
+        <div class="card">
+          <h3 style="font-size:1.25rem; color:#fff; margin-bottom:1.25rem;">Recent Studio Dispatches</h3>
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div style="display:flex; gap:1rem; padding:1rem; background:#12121c; border-radius:var(--radius-md); border:1px solid var(--color-surface-border);">
+              <span style="font-size:1.5rem;">💬</span>
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                  <strong style="color:#fff; font-size:0.95rem;">Elena Vance (Creative Director)</strong>
+                  <span style="font-size:0.75rem; color:var(--color-text-dim);">Today at 10:45 AM</span>
+                </div>
+                <p style="font-size:0.88rem; margin-bottom:0;">
+                  "We have uploaded the latest round of spatial color architecture tokens into your Figma preview file. Please review slide 14 when convenient."
+                </p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1rem; padding:1rem; background:#12121c; border-radius:var(--radius-md); border:1px solid var(--color-surface-border);">
+              <span style="font-size:1.5rem;">📦</span>
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                  <strong style="color:#fff; font-size:0.95rem;">Asset Export Engine</strong>
+                  <span style="font-size:0.75rem; color:var(--color-text-dim);">Yesterday at 4:20 PM</span>
+                </div>
+                <p style="font-size:0.88rem; margin-bottom:0;">
+                  "High-resolution vector marks (SVG, EPS, PDF, monochrome variants) generated and ready for direct production download."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: MY PROJECTS -->
+      <section class="dashboard-tab-panel" id="tab-projects">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">My Active Projects</h1>
+          <button class="btn btn-secondary btn-sm" data-modal-open="newProjectModal">+ New Project Request</button>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card" style="padding:1.5rem;">
+            <span class="badge badge-purple" style="margin-bottom:0.75rem;">Branding</span>
+            <h3 style="color:#fff; font-size:1.25rem; margin-bottom:0.5rem;">Apex Brand Identity System</h3>
+            <p style="font-size:0.88rem; margin-bottom:1rem;">Complete corporate design manual, responsive vector assets, and typography guidelines.</p>
+            <div style="margin-bottom:1rem;">
+              <div style="font-size:0.8rem; color:var(--color-text-dim); margin-bottom:0.25rem;">Sprint Progress</div>
+              <div style="width:100%; height:6px; background:#222; border-radius:3px; overflow:hidden;">
+                <div style="width:85%; height:100%; background:var(--color-purple);"></div>
+              </div>
+            </div>
+            <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm btn-block">Inspect Deliverables</a>
+          </div>
+
+          <div class="card" style="padding:1.5rem;">
+            <span class="badge badge-orange" style="margin-bottom:0.75rem;">UI/UX</span>
+            <h3 style="color:#fff; font-size:1.25rem; margin-bottom:0.5rem;">Nova Fintech Mobile App</h3>
+            <p style="font-size:0.88rem; margin-bottom:1rem;">Dark mode wealth management UI cards, biometric flows, and interactive Figma prototyping.</p>
+            <div style="margin-bottom:1rem;">
+              <div style="font-size:0.8rem; color:var(--color-text-dim); margin-bottom:0.25rem;">Sprint Progress</div>
+              <div style="width:100%; height:6px; background:#222; border-radius:3px; overflow:hidden;">
+                <div style="width:60%; height:100%; background:var(--color-orange);"></div>
+              </div>
+            </div>
+            <a href="project-details.html?project=portfolio-2" class="btn btn-outline btn-sm btn-block">Inspect Deliverables</a>
+          </div>
+
+          <div class="card" style="padding:1.5rem;">
+            <span class="badge badge-emerald" style="margin-bottom:0.75rem;">Packaging</span>
+            <h3 style="color:#fff; font-size:1.25rem; margin-bottom:0.5rem;">Aura Luxury Eco-Packaging</h3>
+            <p style="font-size:0.88rem; margin-bottom:1rem;">Molded fiber unboxing dielines, metallic foil typography, and 3D render lookbook.</p>
+            <div style="margin-bottom:1rem;">
+              <div style="font-size:0.8rem; color:var(--color-text-dim); margin-bottom:0.25rem;">Sprint Progress</div>
+              <div style="width:100%; height:6px; background:#222; border-radius:3px; overflow:hidden;">
+                <div style="width:100%; height:100%; background:var(--color-emerald);"></div>
+              </div>
+            </div>
+            <a href="project-details.html?project=portfolio-1" class="btn btn-outline btn-sm btn-block">Download ZIP Files</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: PROJECT PROGRESS -->
+      <section class="dashboard-tab-panel" id="tab-progress">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Milestone Progress Tracker</h1>
+        </div>
+
+        <div class="card" style="padding:2rem;">
+          <h3 style="color:#fff; margin-bottom:1.5rem;">Apex Brand Identity System — Sprint Roadmap</h3>
+          
+          <div style="display:flex; flex-direction:column; gap:1.5rem; position:relative;">
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:36px; height:36px; border-radius:50%; background:var(--color-emerald); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0;">✓</div>
+              <div>
+                <h4 style="color:#fff; margin-bottom:0.2rem;">Phase 1: Discovery & Strategic Positioning</h4>
+                <p style="font-size:0.88rem; margin-bottom:0;">Competitor audit, stakeholder interviews, and target persona definitions completed.</p>
+                <span style="font-size:0.78rem; color:var(--color-emerald);">Completed Oct 12, 2026</span>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:36px; height:36px; border-radius:50%; background:var(--color-emerald); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0;">✓</div>
+              <div>
+                <h4 style="color:#fff; margin-bottom:0.2rem;">Phase 2: Visual Language & Mark Exploration</h4>
+                <p style="font-size:0.88rem; margin-bottom:0;">Three comprehensive visual directions presented; Direction B selected with unanimous consensus.</p>
+                <span style="font-size:0.78rem; color:var(--color-emerald);">Completed Oct 28, 2026</span>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:36px; height:36px; border-radius:50%; background:var(--color-purple); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0;">3</div>
+              <div>
+                <h4 style="color:#fff; margin-bottom:0.2rem;">Phase 3: Design Token Handoff & Guidelines</h4>
+                <p style="font-size:0.88rem; margin-bottom:0;">Currently synthesizing color scales, typography pairing matrices, and web token variables.</p>
+                <span style="font-size:0.78rem; color:var(--color-lavender);">In Progress (Target: Nov 18, 2026)</span>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+              <div style="width:36px; height:36px; border-radius:50%; background:#26263a; color:var(--color-text-dim); display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0;">4</div>
+              <div>
+                <h4 style="color:var(--color-text-dim); margin-bottom:0.2rem;">Phase 4: Final Sign-off & Source Asset Delivery</h4>
+                <p style="font-size:0.88rem; margin-bottom:0; color:var(--color-text-dim);">IP transfer documents, vector files, and production-ready packaging dielines.</p>
+                <span style="font-size:0.78rem; color:var(--color-text-dim);">Scheduled Nov 25, 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: PROJECT REQUESTS -->
+      <section class="dashboard-tab-panel" id="tab-requests">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Project Requests & Scopes</h1>
+          <button class="btn btn-secondary btn-sm" data-modal-open="newProjectModal">+ New Request</button>
+        </div>
+
+        <div class="card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Request ID</th>
+                <th>Requested Capability</th>
+                <th>Budget Tier</th>
+                <th>Submission Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>REQ-8841</strong></td>
+                <td>Next-Gen Web Platform (WebGL)</td>
+                <td>$30,000 – $50,000</td>
+                <td>Nov 08, 2026</td>
+                <td><span class="status-pill status-review">Under Scoping Review</span></td>
+              </tr>
+              <tr>
+                <td><strong>REQ-8219</strong></td>
+                <td>Editorial Macro Photography Suite</td>
+                <td>$5,000 – $15,000</td>
+                <td>Oct 20, 2026</td>
+                <td><span class="status-pill status-completed">Approved & Scheduled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TAB 5: MESSAGES -->
+      <section class="dashboard-tab-panel" id="tab-messages">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Studio Messages</h1>
+        </div>
+
+        <div class="card" style="padding:2rem;">
+          <div style="border-bottom:1px solid var(--color-surface-border); padding-bottom:1rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong style="color:#fff; font-size:1.1rem;">Thread: Apex Brand Guidelines & Tokens</strong>
+              <div style="font-size:0.82rem; color:var(--color-text-dim);">With Elena Vance (Creative Director)</div>
+            </div>
+            <span class="badge badge-purple">Active Sprint</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem; margin-bottom:2rem;">
+            <div style="background:#181828; padding:1.25rem; border-radius:var(--radius-md); max-width:80%;">
+              <div style="font-size:0.8rem; color:var(--color-lavender); margin-bottom:0.35rem;">Elena Vance • 10:45 AM</div>
+              <p style="font-size:0.95rem; margin-bottom:0; color:#fff;">
+                "Hi Alex! We updated the typography pairings for the mobile dashboard. The primary heading font is now set to Syne Bold, and the body text defaults to Plus Jakarta Sans for maximum legibility."
+              </p>
+            </div>
+
+            <div style="background:rgba(255,87,34,0.1); border:1px solid rgba(255,87,34,0.25); padding:1.25rem; border-radius:var(--radius-md); max-width:80%; align-self:flex-end;">
+              <div style="font-size:0.8rem; color:var(--color-orange); margin-bottom:0.35rem;">You • 11:15 AM</div>
+              <p style="font-size:0.95rem; margin-bottom:0; color:#fff;">
+                "The typography pairings look phenomenal. Our engineering team loves the CSS token variables provided in the Figma handoff."
+              </p>
+            </div>
+          </div>
+
+          <!-- Message Reply Box -->
+          <form onsubmit="event.preventDefault(); showToast('Message dispatched to creative lead!', 'success'); this.reset();">
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="Reply to Elena Vance..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- TAB 6: SAVED PROJECTS -->
+      <section class="dashboard-tab-panel" id="tab-saved">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Saved Portfolio Inspiration</h1>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="project-card">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-3.webp" alt="Vortex Autonomous Mobility" width="900" height="620" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.5rem;">Website Design</span>
+              <h3 class="project-title">Vortex Autonomous Mobility</h3>
+              <p class="project-desc">Saved for reference on interactive 3D WebGL vehicle configurators.</p>
+              <a href="project-details.html?project=portfolio-3" class="btn btn-outline btn-sm">View Reference →</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-media">
+              <img src="assets/images/portfolio-5.webp" alt="Solstice Botanical Elixir" width="900" height="620" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.5rem;">Packaging</span>
+              <h3 class="project-title">Solstice Botanical Elixir</h3>
+              <p class="project-desc">Saved for reference on tactile debossing and aluminum finishes.</p>
+              <a href="project-details.html?project=portfolio-5" class="btn btn-outline btn-sm">View Reference →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 7: PROFILE -->
+      <section class="dashboard-tab-panel" id="tab-profile">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Client Profile</h1>
+        </div>
+
+        <div class="card" style="max-width:680px; padding:2rem;">
+          <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1.75rem; padding-bottom:1.5rem; border-bottom:1px solid var(--color-surface-border);">
+            <img src="assets/images/team-4.webp" alt="Alex Wright" width="68" height="68" style="width:68px; height:68px; border-radius:50%; object-fit:cover; border:2px solid var(--color-orange);">
+            <div>
+              <h3 style="color:#fff; margin-bottom:0.25rem;">Alex Wright</h3>
+              <p style="font-size:0.85rem; color:var(--color-lavender); margin:0;">Enterprise Client • Apex Innovations Corp</p>
+            </div>
+          </div>
+          <form id="userProfileForm">
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="profileName">Full Name</label>
+                <input type="text" id="profileName" class="form-control" value="Alex Wright">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profileEmail">Email Address</label>
+                <input type="email" id="profileEmail" class="form-control" value="alex@apexinnovations.com">
+              </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label" for="profileCompany">Company Name</label>
+                <input type="text" id="profileCompany" class="form-control" value="Apex Innovations Corp">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profilePhone">Mobile Phone</label>
+                <input type="tel" id="profilePhone" class="form-control" value="5558901234">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="profileBilling">Billing Address</label>
+              <input type="text" id="profileBilling" class="form-control" value="750 Lexington Ave, Suite 1400, New York, NY 10022">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Save Profile Changes</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- TAB 8: SETTINGS -->
+      <section class="dashboard-tab-panel" id="tab-settings">
+        <div class="dashboard-header-bar">
+          <h1 style="font-size:2rem; color:#fff;">Workspace Settings</h1>
+        </div>
+
+        <div class="card" style="max-width:680px; padding:2rem;">
+          <h3 style="color:#fff; font-size:1.2rem; margin-bottom:1rem;">Notification Preferences</h3>
+          
+          <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem;">
+            <label style="display:flex; align-items:center; gap:0.75rem; cursor:pointer;">
+              <input type="checkbox" checked style="accent-color:var(--color-purple);">
+              <span>Email notification whenever a milestone deliverable is uploaded</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.75rem; cursor:pointer;">
+              <input type="checkbox" checked style="accent-color:var(--color-purple);">
+              <span>Weekly sprint summary report sent to executive stakeholders</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.75rem; cursor:pointer;">
+              <input type="checkbox" style="accent-color:var(--color-purple);">
+              <span>SMS text alerts for urgent design approvals</span>
+            </label>
+          </div>
+
+          <h3 style="color:#fff; font-size:1.2rem; margin-bottom:1rem;">Security</h3>
+          <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Password reset link sent to registered email.', 'info');">Change Password</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- New Project Modal -->
+  <div class="modal-backdrop" id="newProjectModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Request a New Creative Sprint</h3>
+        <button class="modal-close-btn" data-modal-close>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="newProjectReqForm">
+          <div class="form-group">
+            <label class="form-label" for="reqTitle">Sprint / Project Title <span class="required">*</span></label>
+            <input type="text" id="reqTitle" class="form-control" placeholder="e.g. Q1 Marketing Campaign Assets" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reqCategory">Capability Needed</label>
+            <select id="reqCategory" class="form-control">
+              <option value="Branding">Brand Identity Design</option>
+              <option value="UI/UX">UI/UX Design</option>
+              <option value="Web">Website Development</option>
+              <option value="Motion">Motion Graphics & 3D</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reqScope">Scope Description</label>
+            <textarea id="reqScope" class="form-control" rows="4" placeholder="Briefly specify your targets..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary btn-block">Submit Sprint Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

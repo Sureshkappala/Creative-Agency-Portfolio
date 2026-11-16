@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services — PixelCraft Studio | Creative Agency</title>
+  <meta name="description" content="Explore the full spectrum of creative capabilities at PixelCraft Studio: Branding, UI/UX, Web Development, Motion, Strategy, and Digital Marketing.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span>DEMO PREVIEW:</span> PixelCraft Studio portfolio showcase. All client references, metrics, and inquiry forms are simulated.
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="PixelCraft Studio Homepage">
+        <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="144" height="57">
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="start-project.html" class="btn btn-primary btn-sm">Start a Project</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="130" height="51">
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu" style="background:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>→</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+        <a href="services.html" class="mobile-nav-link active">Our Services <span>→</span></a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio <span>→</span></a>
+        <a href="team.html" class="mobile-nav-link">Our Team <span>→</span></a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing Plans <span>→</span></a>
+        <a href="blog.html" class="mobile-nav-link">Studio Blog <span>→</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us <span>→</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="start-project.html" class="btn btn-secondary btn-block">Start a Project</a>
+      <div class="mobile-drawer-contact">
+        <div class="drawer-contact-title">Direct Studio Contact</div>
+        <a href="mailto:hello@pixelcraft.studio" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#9993;</span>
+          <span class="drawer-contact-text">hello@pixelcraft.studio</span>
+        </a>
+        <a href="tel:+15557493527" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128222;</span>
+          <span class="drawer-contact-text">+1 (555) 749-3527</span>
+        </a>
+        <div class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128205;</span>
+          <span class="drawer-contact-text">New York &bull; London &bull; Tokyo</span>
+        </div>
+        <div class="drawer-contact-hours">&#9201; Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM EST</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Header -->
+    <section class="section-py" style="padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: 2.5rem;">
+      <div class="container text-center">
+        <div class="section-eyebrow">Our Full Repertoire</div>
+        <h1 class="section-title">Design, Code & Strategy <span class="text-gradient">Engineered to Win.</span></h1>
+        <p class="section-desc" style="margin: 0 auto 2.5rem auto;">
+          Discover our 12 specialized disciplines. We craft seamless touchpoints from corporate identity to digital product design and conversion funnels.
+        </p>
+        <div style="max-width:1000px; margin:0 auto; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--color-surface-border); box-shadow:var(--shadow-lg), var(--shadow-glow-orange);">
+          <img src="assets/images/services-hero.webp" alt="Creative design team reviewing brand logos, color palettes, and visual moodboards" width="900" height="900" loading="eager" fetchpriority="high" style="width:100%; max-height:520px; object-fit:cover; object-position:center 42%; display:block;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Filter & Grid -->
+    <section class="section-py" style="padding-top:0;">
+      <div class="container">
+        <!-- Interactive Filter & Search Bar -->
+        <div class="filter-bar" id="serviceFilterBar">
+          <div class="filter-pills">
+            <button class="filter-btn active" data-filter="all">All Disciplines</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="digital">Web & UI/UX</button>
+            <button class="filter-btn" data-filter="visual">Visual & Media</button>
+            <button class="filter-btn" data-filter="marketing">Marketing & Strategy</button>
+          </div>
+
+          <div class="search-box">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" class="search-input" id="serviceSearchInput" placeholder="Search capabilities..." aria-label="Search services">
+          </div>
+        </div>
+
+        <div id="serviceResultCount" style="margin-bottom:1.5rem; font-size:0.9rem; color:var(--color-text-dim);">
+          Showing 12 services
+        </div>
+
+        <!-- 12 Service Cards -->
+        <div class="grid grid-3" id="servicesGrid">
+          
+          <!-- 1. Brand Identity Design -->
+          <div class="service-card service-card-item" data-category="branding">
+            <div class="service-card-media">
+              <img src="assets/images/service-brand-identity.webp" alt="Brand Identity Design" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Branding</span>
+              <h3 class="service-card-title">Brand Identity Design</h3>
+              <p class="service-card-desc">Holistic visual systems, tonal messaging, and cohesive brand guidelines that position your company as the category authority.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Comprehensive Brand Stylebook</li>
+                  <li>Color Palette & Typography Matrix</li>
+                  <li>Corporate Collateral & Stationery</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=brand-identity" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Brand+Identity+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Logo Design -->
+          <div class="service-card service-card-item" data-category="branding">
+            <div class="service-card-media">
+              <img src="assets/images/service-logo-design.webp" alt="Logo Design" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Branding</span>
+              <h3 class="service-card-title">Logo Design</h3>
+              <p class="service-card-desc">Timeless, responsive logo marks engineered for legibility across micro-favicons, mobile apps, packaging, and outdoor billboards.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Primary & Secondary Logo Marks</li>
+                  <li>Responsive Vector Exports (SVG, EPS, PDF)</li>
+                  <li>Clear-space & Misuse Guidelines</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=logo-design" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Logo+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Website Design -->
+          <div class="service-card service-card-item" data-category="digital">
+            <div class="service-card-media">
+              <img src="assets/images/service-website-design.webp" alt="Website Design" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Digital</span>
+              <h3 class="service-card-title">Website Design</h3>
+              <p class="service-card-desc">Breathtaking editorial web layouts designed to convert visitors into die-hard brand advocates with immersive storytelling.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>High-Fidelity Figma Prototypes</li>
+                  <li>Responsive Multi-Device Layouts</li>
+                  <li>Interactive Micro-Animations</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=website-design" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Website+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Website Development -->
+          <div class="service-card service-card-item" data-category="digital">
+            <div class="service-card-media">
+              <img src="assets/images/service-web-development.webp" alt="Website Development" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Digital</span>
+              <h3 class="service-card-title">Website Development</h3>
+              <p class="service-card-desc">Clean, semantic HTML5/CSS3/Vanilla JS architecture with sub-second speeds, zero bloat, and full WCAG AA accessibility compliance.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>100% Lighthouse Performance</li>
+                  <li>Headless CMS Architecture</li>
+                  <li>Cross-Browser & Mobile QA</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=web-development" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Website+Development" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. UI/UX Design -->
+          <div class="service-card service-card-item" data-category="digital">
+            <div class="service-card-media">
+              <img src="assets/images/service-ui-ux.webp" alt="UI/UX Design" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Digital</span>
+              <h3 class="service-card-title">UI/UX Design</h3>
+              <p class="service-card-desc">Intuitive, friction-free interfaces for web platforms and native mobile apps grounded in user psychology and interaction design.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>User Journey & Empathy Mapping</li>
+                  <li>Wireframing & Information Architecture</li>
+                  <li>Design Tokens & Component Library</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=ui-ux" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=UI%2FUX+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Graphic Design -->
+          <div class="service-card service-card-item" data-category="visual">
+            <div class="service-card-media">
+              <img src="assets/images/service-graphic-design.webp" alt="Graphic Design" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Visual</span>
+              <h3 class="service-card-title">Graphic Design</h3>
+              <p class="service-card-desc">Bold typographic print, magazine editorials, outdoor advertising, and social campaign visual systems that command attention.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Editorial Books & Catalogs</li>
+                  <li>Billboards & Out-of-Home Media</li>
+                  <li>Vector Graphic Illustration Sets</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=graphic-design" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Graphic+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Social Media Marketing -->
+          <div class="service-card service-card-item" data-category="marketing">
+            <div class="service-card-media">
+              <img src="assets/images/service-social-marketing.webp" alt="Social Media Marketing" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Marketing</span>
+              <h3 class="service-card-title">Social Media Marketing</h3>
+              <p class="service-card-desc">Cultural storytelling designed to generate viral attention, build community loyalty, and turn followers into paying customers.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Content Grid Aesthetic & Calendar</li>
+                  <li>Short-Form Reels & Kinetic Videos</li>
+                  <li>Influencer Collaboration Framework</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=social-marketing" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Social+Media+Marketing" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Digital Marketing -->
+          <div class="service-card service-card-item" data-category="marketing">
+            <div class="service-card-media">
+              <img src="assets/images/service-digital-marketing.webp" alt="Digital Marketing" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Marketing</span>
+              <h3 class="service-card-title">Digital Marketing</h3>
+              <p class="service-card-desc">High-ROI performance advertising, multi-channel customer acquisition funnels, and conversion rate optimization (CRO).</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Paid Ads Creative Direction & Copy</li>
+                  <li>Multi-Channel Funnel Architecture</li>
+                  <li>Conversion Rate Optimization (CRO)</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=digital-marketing" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Digital+Marketing" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Motion Graphics -->
+          <div class="service-card service-card-item" data-category="visual">
+            <div class="service-card-media">
+              <img src="assets/images/service-motion-graphics.webp" alt="Motion Graphics" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Visual</span>
+              <h3 class="service-card-title">Motion Graphics</h3>
+              <p class="service-card-desc">Captivating 2D/3D kinetic animations, animated brand reveals, UI micro-interactions, and high-impact digital showcases.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Kinetic Typography Videos</li>
+                  <li>Animated Logo Ident & Reveal</li>
+                  <li>Lottie / WebGL Animation Files</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=motion-graphics" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Motion+Graphics" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Photography & Videography -->
+          <div class="service-card service-card-item" data-category="visual">
+            <div class="service-card-media">
+              <img src="assets/images/service-photography.webp" alt="Photography and Videography" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Visual</span>
+              <h3 class="service-card-title">Photography & Videography</h3>
+              <p class="service-card-desc">Commercial studio macro photography, cinematic brand anthem films, and lifestyle product lookbooks shot with meticulous lighting.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>4K Cinematic Brand Commercials</li>
+                  <li>Studio Macro Product Photography</li>
+                  <li>Commercial Licensing Rights</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=photography" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Photography" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Packaging Design -->
+          <div class="service-card service-card-item" data-category="visual">
+            <div class="service-card-media">
+              <img src="assets/images/service-packaging-design.webp" alt="Packaging Design" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Visual</span>
+              <h3 class="service-card-title">Packaging Design</h3>
+              <p class="service-card-desc">Sensory unboxing experiences, sustainable packaging substrates, tactile embossing, and shelf-stopping structural design.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Structural Dielines & 3D Renders</li>
+                  <li>Eco-Conscious Substrate Guidance</li>
+                  <li>Print Production-Ready Dielines</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=packaging-design" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Packaging+Design" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Creative Strategy -->
+          <div class="service-card service-card-item" data-category="marketing">
+            <div class="service-card-media">
+              <img src="assets/images/service-creative-strategy.webp" alt="Creative Strategy" width="800" height="500" loading="lazy">
+            </div>
+            <div class="service-card-content">
+              <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Marketing</span>
+              <h3 class="service-card-title">Creative Strategy</h3>
+              <p class="service-card-desc">Executive-level brand positioning, competitive white-space identification, and cultural trend forecasting for market disruption.</p>
+              <div class="service-deliverables">
+                <h5>Key Deliverables</h5>
+                <ul>
+                  <li>Competitive Landscape Audit</li>
+                  <li>Brand Positioning & Value Proposition</li>
+                  <li>Executive Creative Roadmaps</li>
+                </ul>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=creative-strategy" class="btn btn-outline btn-sm">View Details</a>
+                <a href="start-project.html?service=Creative+Strategy" class="btn btn-primary btn-sm">Start Project</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Deliverable Standards -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Studio Standards</div>
+          <h2 class="section-title">Included in Every <span class="text-gradient">Engagement</span></h2>
+          <p class="section-desc">Every discipline adheres to strict engineering and creative quality benchmarks.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="why-icon-box">01</div>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">100% IP Ownership</h3>
+            <p style="font-size:0.88rem; margin:0;">All source vectors, Figma libraries, and repositories transfer to you upon sign-off.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">02</div>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Sub-Second Speed</h3>
+            <p style="font-size:0.88rem; margin:0;">Web assets compressed under 100KB with semantic HTML5 and zero render-blocking bloat.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">03</div>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">WCAG Accessibility</h3>
+            <p style="font-size:0.88rem; margin:0;">High-contrast ratios, keyboard navigation, and responsive adaptation from 320px up.</p>
+          </div>
+          <div class="card">
+            <div class="why-icon-box">04</div>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Senior Specialists</h3>
+            <p style="font-size:0.88rem; margin:0;">Direct collaboration with principal designers and creative directors — never outsourced.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Tech & Production Stack -->
+    <section class="section-py">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Production Stack</div>
+          <h2 class="section-title">Tools Powering <span class="text-gradient">Our Craft</span></h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Design & Identity</span>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Figma, Illustrator & InDesign</h3>
+            <p style="font-size:0.88rem; margin:0;">Scalable design tokens, responsive UI kits, and print-ready packaging dielines.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-orange" style="align-self:flex-start; margin-bottom:0.75rem;">3D & Motion</span>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">Blender, Cinema 4D & After Effects</h3>
+            <p style="font-size:0.88rem; margin:0;">Photorealistic product renders, kinetic typography, and broadcast-grade reels.</p>
+          </div>
+          <div class="card">
+            <span class="badge badge-purple" style="align-self:flex-start; margin-bottom:0.75rem;">Web Engineering</span>
+            <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.5rem;">HTML5, CSS3, Three.js & Headless CMS</h3>
+            <p style="font-size:0.88rem; margin:0;">Bespoke interactive flagships engineered for speed, SEO, and conversion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-py" style="background-color: var(--color-bg-alt);">
+      <div class="container text-center">
+        <h2>Unsure Which Capability Fits Your Needs?</h2>
+        <p class="section-desc" style="margin: 1rem auto 2.5rem auto;">Schedule a 30-minute creative consultation with our studio principals to map out your roadmap.</p>
+        <a href="start-project.html" class="btn btn-secondary btn-lg">Start a Project Discovery</a>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Homepage">
+            <img src="assets/images/logo-teal.webp" alt="Stackly Logo" class="logo-img" width="144" height="57">
+          </a>
+          <p class="footer-desc">
+            Mobilizing intelligent financial tracking, automated category allocations, food security envelopes, and personalized wealth planning for modern life.
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="services.html">Platform Features</a>
+            <a href="portfolio.html">Expense Categories</a>
+            <a href="team.html">Expense Management</a>
+            <a href="pricing.html">Budget Planner</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h5>Support</h5>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="about.html">Terms & Agreements</a>
+            <a href="pricing.html">Security Audits</a>
+            <a href="services.html">Cashflow Reports</a>
+            <a href="portfolio.html">Savings Vaults</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p class="newsletter-desc">Get quarterly financial updates, smart budgeting alerts, and platform feature reports.</p>
+          <form class="footer-newsletter-form" aria-label="Newsletter Subscription Form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required aria-label="Your Email">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

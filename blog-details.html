@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Evolution of Spatial UI: Beyond Flat Interfaces — PixelCraft Studio</title>
+  <meta name="description" content="In-depth editorial on spatial user interface design, tactile glassmorphism, depth tokens, and modern ergonomics by PixelCraft Studio.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span>DEMO PREVIEW:</span> PixelCraft Studio portfolio showcase. All client references, metrics, and inquiry forms are simulated.
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="PixelCraft Studio Homepage">
+        <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="144" height="57">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="start-project.html" class="btn btn-primary btn-sm">Start a Project</a>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo-white.webp" alt="PixelCraft Studio Logo" class="logo-img" width="130" height="51">
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu" style="background:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>→</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+        <a href="services.html" class="mobile-nav-link">Our Services <span>→</span></a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio <span>→</span></a>
+        <a href="team.html" class="mobile-nav-link">Our Team <span>→</span></a>
+        <a href="pricing.html" class="mobile-nav-link">Pricing Plans <span>→</span></a>
+        <a href="blog.html" class="mobile-nav-link active">Studio Blog <span>→</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us <span>→</span></a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="start-project.html" class="btn btn-secondary btn-block">Start a Project</a>
+      <div class="mobile-drawer-contact">
+        <div class="drawer-contact-title">Direct Studio Contact</div>
+        <a href="mailto:hello@pixelcraft.studio" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#9993;</span>
+          <span class="drawer-contact-text">hello@pixelcraft.studio</span>
+        </a>
+        <a href="tel:+15557493527" class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128222;</span>
+          <span class="drawer-contact-text">+1 (555) 749-3527</span>
+        </a>
+        <div class="drawer-contact-row">
+          <span class="drawer-contact-icon">&#128205;</span>
+          <span class="drawer-contact-text">New York &bull; London &bull; Tokyo</span>
+        </div>
+        <div class="drawer-contact-hours">&#9201; Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM EST</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Article Header -->
+    <article>
+      <header class="section-py" style="padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: 2rem;">
+        <div class="container" style="max-width:880px;">
+          <div style="margin-bottom:1.5rem;">
+            <a href="blog.html" style="color:var(--color-text-muted); font-size:0.9rem; display:inline-flex; align-items:center; gap:0.5rem;">
+              ← Back to All Articles
+            </a>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
+            <span class="badge badge-purple">Design Trends</span>
+            <span style="font-size:0.85rem; color:var(--color-text-dim);">Published Nov 04, 2026 • 5 Min Read</span>
+          </div>
+          <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); line-height:1.15; margin-bottom:1.5rem;">
+            The Evolution of Spatial UI: Beyond Flat Interfaces
+          </h1>
+
+          <!-- Author Info Bar -->
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.25rem; border-top:1px solid var(--color-surface-border); border-bottom:1px solid var(--color-surface-border); padding:1rem 0;">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <img src="assets/images/team-2.webp" alt="Marcus Thorne" width="48" height="48" style="width:48px; height:48px; border-radius:50%; border:1px solid var(--color-purple);">
+              <div>
+                <div style="font-weight:700; color:#fff; font-size:0.95rem;">Marcus Thorne</div>
+                <div style="font-size:0.8rem; color:var(--color-lavender);">Lead UI/UX Designer, PixelCraft Studio</div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <button class="btn btn-outline btn-sm" id="copyArticleLinkBtn" title="Copy article link">🔗 Copy Link</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured Image Banner -->
+      <div class="container" style="max-width:880px; margin-bottom:3rem;">
+        <div style="border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--color-surface-border); box-shadow:var(--shadow-lg);">
+          <img src="assets/images/blog-1.webp" alt="Spatial UI design concept banner" width="880" height="550" loading="eager" style="width:100%; height:auto;">
+        </div>
+      </div>
+
+      <!-- Article Content Body -->
+      <section class="container" style="max-width:880px; line-height:1.8; font-size:1.1rem; color:#d8d8e6;">
+        <p>
+          For over a decade, digital interface design was gripped by the orthodoxy of aggressive flat minimalism. Driven originally by early responsive mobile constraints, UI components lost depth, tactile elevation, and spatial orientation.
+        </p>
+
+        <p>
+          Today, we stand at the threshold of a profound shift: the emergence of <strong>Spatial UI</strong>. Propelled by high-refresh displays, spatial computing headsets, and GPU-accelerated browser engines, interfaces are reclaiming the laws of physical illumination.
+        </p>
+
+        <!-- Pull Quote -->
+        <blockquote style="margin: 2.5rem 0; padding: 1.5rem 2rem; background: rgba(139, 92, 246, 0.08); border-left: 4px solid var(--color-purple); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+          <p style="font-size: 1.25rem; font-style: italic; color: #ffffff; margin-bottom: 0.5rem;">
+            "Depth is not gratuitous ornament. When calibrated correctly, spatial layers convey hierarchy faster than any color badge or typography size could ever accomplish."
+          </p>
+          <cite style="font-size: 0.85rem; color: var(--color-lavender); font-style: normal;">— Marcus Thorne, PixelCraft Design Lab</cite>
+        </blockquote>
+
+        <h2 style="color:#fff; font-size:1.85rem; margin:2.5rem 0 1rem 0;">1. Physical Lighting as Hierarchy</h2>
+        <p>
+          In traditional flat design, active modals and cards competed on the exact same z-plane. In Spatial UI, light sources are dynamic. Specular edge highlights indicate actionable boundaries, while ambient occlusion anchors floating panels against backdrop noise.
+        </p>
+
+        <div class="card" style="margin:2rem 0; padding:1.5rem; background:#12121c; border-color:var(--color-surface-border);">
+          <h4 style="color:var(--color-orange); margin-bottom:0.5rem;">Studio Insight: The 3-Layer Spatial Rule</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.95rem; color:var(--color-text-muted);">
+            <li><strong>Base Plate (z=0):</strong> Deep obsidian canvases with subtle geometric grid references.</li>
+            <li><strong>Surface Level (z=1):</strong> Interactive cards receiving subtle backlighting on pointer proximity.</li>
+            <li><strong>Elevated Modal (z=2):</strong> Floating glassmorphic containers with real-time backdrop blur and specular rim lighting.</li>
+          </ul>
+        </div>
+
+        <h2 style="color:#fff; font-size:1.85rem; margin:2.5rem 0 1rem 0;">2. Haptic Feedback & Spring Physics</h2>
+        <p>
+          Rigid linear animations destroy the illusion of tangibility. To make digital artifacts feel physical, transitions must obey spring dampening algorithms. When a user drags a card in a spatial dashboard, momentum and friction must replicate real-world mass.
+        </p>
+
+        <p>
+          At PixelCraft Studio, we enforce <code>cubic-bezier(0.16, 1, 0.3, 1)</code> across all interactive micro-animations. It creates an instantaneous snap followed by an organic, luxurious deceleration that makes digital interfaces feel astonishingly responsive.
+        </p>
+
+        <h2 style="color:#fff; font-size:1.85rem; margin:2.5rem 0 1rem 0;">3. Preparing Your Product Roadmap</h2>
+        <p>
+          Forward-thinking engineering teams shouldn't wait for spatial hardware to achieve mass adoption. Incorporating ambient depth tokens, subtle directional shadows, and haptic feedback today immediately differentiates your web platform from stagnant competitors.
+        </p>
+      </section>
+
+      <!-- Author Card Footer -->
+      <div class="container" style="max-width:880px; margin-top:3.5rem;">
+        <div class="card" style="display:flex; gap:1.75rem; align-items:center; padding:2rem; background:var(--color-surface);">
+          <img src="assets/images/team-2.webp" alt="Marcus Thorne" width="90" height="90" style="width:90px; height:90px; border-radius:50%; border:2px solid var(--color-purple);">
+          <div>
+            <h4 style="color:#fff; font-size:1.2rem; margin-bottom:0.25rem;">Written by Marcus Thorne</h4>
+            <div style="color:var(--color-orange); font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Lead UI/UX Designer</div>
+            <p style="font-size:0.92rem; margin-bottom:0;">Marcus oversees design systems and interaction engineering at PixelCraft Studio. He speaks regularly at international design conferences on spatial ergonomics.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Comments Section -->
+      <section class="container" style="max-width:880px; margin-top:4rem;">
+        <div class="section-header">
+          <div class="section-eyebrow">Discussion</div>
+          <h2 style="font-size:1.75rem;">Join the Conversation (Demo)</h2>
+          <p style="font-size:0.95rem;">Share your perspectives on spatial UI. Submissions are simulated in front-end session.</p>
+        </div>
+
+        <!-- Comment Form -->
+        <form id="blogCommentForm" class="card" style="padding:2rem; margin-bottom:2.5rem;">
+          <div class="grid grid-2" style="margin-bottom:1.25rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="commentName">Your Name <span class="required">*</span></label>
+              <input type="text" id="commentName" class="form-control" placeholder="e.g. Liam Taylor" required>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="commentEmail">Email Address (Not Published)</label>
+              <input type="email" id="commentEmail" class="form-control" placeholder="liam@domain.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="commentMessage">Your Comment / Feedback <span class="required">*</span></label>
+            <textarea id="commentMessage" class="form-control" rows="4" placeholder="What are your thoughts on spatial interfaces?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary">Post Comment</button>
+        </form>
+
+        <!-- Existing Comments List -->
+        <div id="blogCommentList">
+          <div class="card" style="padding:1.5rem; margin-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h5 style="color:#ffffff; font-size:1rem;">Camilla Rostova</h5>
+              <span style="font-size:0.75rem; color:var(--color-text-dim);">Nov 05, 2026</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--color-text-muted); margin-bottom:0;">
+              The distinction between flat ornament and functional spatial lighting is brilliant. We implemented directional shadows in our SaaS platform last month and saw immediate drop-off reductions in our onboarding funnel.
+            </p>
+          </div>
+
+          <div class="card" style="padding:1.5rem; margin-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h5 style="color:#ffffff; font-size:1rem;">David Kim</h5>
+              <span style="font-size:0.75rem; color:var(--color-text-dim);">Nov 06, 2026</span>
+            </div>
+            <p style="font-size:0.92rem; color:var(--color-text-muted); margin-bottom:0;">
+              Totally agree on the cubic-bezier spring curve. Standard ease-in-out always felt sluggish in web apps. Great read Marcus!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Posts -->
+      <section class="section-py" style="background-color:var(--color-bg-alt); margin-top:4rem;">
+        <div class="container">
+          <div class="section-header text-center">
+            <div class="section-eyebrow">Continue Reading</div>
+            <h2 class="section-title">Related Essays</h2>
+          </div>
+
+          <div class="grid grid-2" style="max-width:880px; margin:0 auto;">
+            <div class="card" style="padding:1.5rem;">
+              <span class="badge badge-purple" style="margin-bottom:0.5rem;">Branding</span>
+              <h4 style="color:#fff; margin-bottom:0.5rem;"><a href="blog-details.html">Branding in the Age of Generative Intelligence</a></h4>
+              <p style="font-size:0.88rem; margin-bottom:1rem;">When synthetic images become infinite, intentional craft emerges as luxury status.</p>
+              <a href="blog-details.html" style="color:var(--color-orange); font-weight:700; font-size:0.85rem;">Read Essay →</a>
+            </div>
+
+            <div class="card" style="padding:1.5rem;">
+              <span class="badge badge-purple" style="margin-bottom:0.5rem;">UI/UX</span>
+              <h4 style="color:#fff; margin-bottom:0.5rem;"><a href="blog-details.html">Mastering Micro-Interactions: The Secret to Addictive UX</a></h4>
+              <p style="font-size:0.88rem; margin-bottom:1rem;">A forensic analysis of spring physics and state transformations.</p>
+              <a href="blog-details.html" style="color:var(--color-orange); font-weight:700; font-size:0.85rem;">Read Essay →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Takeaways Summary -->
+      <section class="section-py">
+        <div class="container" style="max-width:880px;">
+          <div class="section-header text-center">
+            <div class="section-eyebrow">Executive Summary</div>
+            <h2 class="section-title">Key <span class="text-gradient">Takeaways</span></h2>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <h4 style="color:var(--color-orange); margin-bottom:0.4rem;">01. Depth With Restraint</h4>
+              <p style="font-size:0.88rem; margin:0;">Use subtle elevation and frosted surfaces to guide visual hierarchy without overwhelming mobile GPUs.</p>
+            </div>
+            <div class="card">
+              <h4 style="color:var(--color-lavender); margin-bottom:0.4rem;">02. Purposeful Motion</h4>
+              <p style="font-size:0.88rem; margin:0;">Honor prefers-reduced-motion while reserving kinetic transitions for meaningful state feedback.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Subscribe CTA -->
+      <section class="section-py" style="background-color: var(--color-bg-alt);">
+        <div class="container text-center">
+          <h2>Enjoyed This Dispatch?</h2>
+          <p class="section-desc" style="margin: 1rem auto 2rem auto;">Subscribe for monthly studio notes on branding, spatial UI, and web engineering.</p>
+          <div style="max-width:480px; margin:0 auto;">
+            <form class="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn-secondary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Homepage">
+            <img src="assets/images/logo-teal.webp" alt="Stackly Logo" class="logo-img" width="144" height="57">
+          </a>
+          <p class="footer-desc">
+            Mobilizing intelligent financial tracking, automated category allocations, food security envelopes, and personalized wealth planning for modern life.
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="services.html">Platform Features</a>
+            <a href="portfolio.html">Expense Categories</a>
+            <a href="team.html">Expense Management</a>
+            <a href="pricing.html">Budget Planner</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div class="footer-col">
+          <h5>Support</h5>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="about.html">Terms & Agreements</a>
+            <a href="pricing.html">Security Audits</a>
+            <a href="services.html">Cashflow Reports</a>
+            <a href="portfolio.html">Savings Vaults</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p class="newsletter-desc">Get quarterly financial updates, smart budgeting alerts, and platform feature reports.</p>
+          <form class="footer-newsletter-form" aria-label="Newsletter Subscription Form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required aria-label="Your Email">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          © 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
